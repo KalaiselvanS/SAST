@@ -1,0 +1,20 @@
+<CharacterizationRule formatVersion="%FORMATVERSION%" language="%Language%">
+	<RuleID>%RULEID%</RuleID>
+	<StructuralMatch><![CDATA[
+		VariableAccess va: va.variable.name matches "%PrivateTaintSource.SearchString%" and
+						not va in [AssignmentStatement: lhs.location is va]
+	]]></StructuralMatch>
+	<Definition><![CDATA[
+		TaintSource(va, {+PRIVATE})
+	]]></Definition>
+</CharacterizationRule>
+<CharacterizationRule formatVersion="%FORMATVERSION%" language="%Language%">
+	<RuleID>%RULEID%1</RuleID>
+	<StructuralMatch><![CDATA[
+		FieldAccess fa: fa.field.name matches "%PrivateTaintSource.SearchString%" and
+					not fa in [AssignmentStatement: lhs.location is fa]
+	]]></StructuralMatch>
+	<Definition><![CDATA[
+		TaintSource(fa, {+PRIVATE})
+	]]></Definition>
+</CharacterizationRule>

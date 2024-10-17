@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="FLEX-3" isLanguageScreen="true" language="flex">
+	<control>
+		<argument type="switch" useQuotes="true">-flex-libraries</argument>
+		<fileList sep=";" icon="file" repeat="5">
+			<filter isExtension="true">swc</filter>
+			<filter isExtension="true">swf</filter>
+		</fileList>
+	</control>
+	<query>FLEX Libraries</query>
+	<help>FLEX-3.txt</help>
+	<transition />
+</screen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="PYTHON-1" isLanguageScreen="true" language="python">
+	<control>
+		<argument type="switch" useQuotes="true">-python-path</argument>
+		<directoryList sep=";" />
+	</control>
+	<query>Python Import Directories</query>
+	<help>PY-1.txt</help>
+	<transition />
+</screen>

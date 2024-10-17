@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="DefaultSeparateUserDev" packages="com.fortify.logging.log4j2" status="FATAL">
+   <Appenders>
+      <File  append="true" fileName="${sys:fortifyupdate.log.file}/fortifyupdate.log" name="fortifyupdate">
+        <PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %msgid]%n%msg%n%ex   logger:%logger marker:%marker thread:%t-%threadId%n   MDC:%MDC NDC:%NDC%n"/>
+      </File>
+      <Console name="stderr_appender" target="SYSTEM_ERR">
+         <PatternLayout pattern="%X{prefix}%msg%n"/>
+         <Filters>
+            <ContextMapFilter onMatch="ACCEPT" onMisMatch="DENY" operator="or">
+               <KeyValuePair key="stderr" value="true"/>
+            </ContextMapFilter>
+         </Filters>
+      </Console>
+      <Console name="stdout_appender" target="SYSTEM_OUT">
+         <PatternLayout pattern="%msg%n"/>
+         <Filters>
+            <ContextMapFilter onMatch="ACCEPT" onMisMatch="DENY" operator="or">
+               <KeyValuePair key="stdout" value="true"/>
+            </ContextMapFilter>
+         </Filters>
+      </Console>
+   </Appenders>
+   <Loggers>
+      <Logger name="com.fortify.tools" additivity="true" level="DEBUG">
+         <AppenderRef ref="fortifyupdate"/>
+      </Logger>
+      <Root level="WARN">
+         <AppenderRef ref="fortifyupdate"/>
+         <AppenderRef ref="stderr_appender"/>
+         <AppenderRef ref="stdout_appender"/>
+      </Root>
+   </Loggers>
+</Configuration>

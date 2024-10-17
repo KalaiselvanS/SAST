@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-2">
+	<language>dotnet</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">cs</filter>
+			<filter isExtension="true">vb</filter>
+			<filter isExtension="true">exe</filter>
+			<filter isExtension="true">dll</filter>
+			<filter isExtension="true">mod</filter>
+			<filter isExtension="true">mdl</filter>
+            <filter isExtension="true">aspx</filter>
+		</fileList>
+	</control>
+	<query>Please review .NET files to be scanned</query>
+	<help/>
+	<transition>NET-3</transition>
+</screen>

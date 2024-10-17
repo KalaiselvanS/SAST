@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ASP-1">
+	<language>asp</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">asp</filter>
+		</fileList>
+	</control>
+	<query>Please review ASP files to be scanned</query>
+	<help/>
+	<transition>ASP-2</transition>
+</screen>

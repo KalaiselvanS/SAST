@@ -1,0 +1,12 @@
+<RegexRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnCategory>Generic Regex Rule</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes>The regular expressions must be enclosed in an XML CDATA section to match. Add the XML CDATA to encapsulate the regular expressions. As an example, you can use &lt;![CDATA[(?i)fortify]]&gt; to match the case-insensitive string "Fortify".</Notes>
+    <Description  formatVersion="3.2">
+        <Explanation append="true">This issue is being reported by a custom generic Regex rule that matches on both FileNameRegex and ContentRegex.</Explanation>
+    </Description>
+    <FileNameRegex><![CDATA[%FileNameRegex%]]></FileNameRegex>
+    <ContentRegex><![CDATA[%ContentRegex%]]></ContentRegex>
+</RegexRule>

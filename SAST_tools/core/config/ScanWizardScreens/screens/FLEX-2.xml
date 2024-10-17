@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="FLEX-2" isLanguageScreen="true" language="flex">
+	<control>
+		<argument type="switch" useQuotes="true">-flex-sdk-root</argument>
+		<directorySelect description="Flex SDK directory" />
+	</control>
+	<query>FLEX SDK Root</query>
+	<help>FLEX-2.txt</help>
+	<transition>FLEX-3</transition>
+</screen>

@@ -1,0 +1,24 @@
+<ControlflowTransition formatVersion="%FORMATVERSION%" language="%Language%">
+            <RuleID>%RULEID%</RuleID>
+            <ParentRuleID>B530C5D6-3C71-48C5-9512-72A7F4911822</ParentRuleID>
+             <FunctionIdentifier id="custom_allocation">
+                <FunctionName>
+                   <Pattern>%AllocationFunction.FunctionName%</Pattern>
+                </FunctionName>
+             </FunctionIdentifier>
+             <Definition>
+             start -> allocated { m = $custom_allocation(...) } 
+             </Definition>
+</ControlflowTransition>
+<ControlflowTransition formatVersion="%FORMATVERSION%" language="%Language%">
+            <RuleID>%RULEID%1</RuleID>
+            <ParentRuleID>B530C5D6-3C71-48C5-9512-72A7F4911822</ParentRuleID> 
+             <FunctionIdentifier id="custom_deallocation">
+                <FunctionName>
+                   <Pattern>%DeallocationFunction.FunctionName%</Pattern>
+                </FunctionName>
+             </FunctionIdentifier>
+			 <Definition>
+                            allocated -> safe { $custom_deallocation(...,m,...) } 
+			 </Definition>
+</ControlflowTransition>

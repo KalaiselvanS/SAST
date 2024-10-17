@@ -1,0 +1,5 @@
+To update the <b>Build Integration Settings</b> that you want SCA to use in project translation, select the <b>Makefiles</b>.
+
+Modifying the targets will update the command, but you can override that to construct the command manually.
+
+

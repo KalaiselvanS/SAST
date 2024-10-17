@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="CFML-1">
+	<language>cfml</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">cfm</filter>
+			<filter isExtension="true">cfml</filter>
+			<filter isExtension="true">cfc</filter>
+		</fileList>
+	</control>
+	<query>Please review ColdFusion files to be scanned</query>
+	<help/>
+	<transition>CFML-2</transition>
+</screen>

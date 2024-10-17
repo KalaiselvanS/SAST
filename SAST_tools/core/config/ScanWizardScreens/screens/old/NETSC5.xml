@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-5">
+	<language>dotnet</language>
+	<argument type="empty"></argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="Yes, I would like to specify the ildasm.exe" isDefault="false" transition="NET-6" />
+			<radioButton description="No, let SCA find it." isDefault="true" transition="" />
+		</radioButtonGroup>
+	</control>
+	<query>Would you like to specify the Ildasm SCA should use?</query>
+	<help/>
+	<transition></transition>
+</screen>

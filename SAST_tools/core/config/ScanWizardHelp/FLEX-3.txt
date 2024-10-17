@@ -1,0 +1,4 @@
+This is a list of library names that you want to link to. In most cases, this list includes <b>flex.swc</b>,<b>framework.swc</b>, and <b>playerglobal.swc</b>.
+
+<b>Note:</b> SCA supports swc and swf files. It does not support swz files.
+

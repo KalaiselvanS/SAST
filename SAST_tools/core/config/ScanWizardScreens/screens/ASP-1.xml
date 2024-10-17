@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ASP-1" isLanguageScreen="true" language="asp">
+	<control>
+		<argument type="property">-Dcom.fortify.sca.ASPVirtualRoots.</argument>
+		<tupleList sep="=">
+			<tupleElement query="Specify virtual root">Virtual Root</tupleElement>
+			<tupleElement query="Specify path for virtual root">Path</tupleElement>
+		</tupleList>
+	</control>
+	<query>ASP Virtual Paths</query>
+	<help>ASP-1.txt</help>
+	<transition />
+</screen>

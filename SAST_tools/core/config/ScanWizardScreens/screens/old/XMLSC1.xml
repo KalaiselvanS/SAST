@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="XML-1">
+	<language>xml</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">xml</filter>
+			<filter isExtension="true">xsd</filter>
+			<filter isExtension="true">xmi</filter>
+			<filter isExtension="true">wsdd</filter>
+			<filter isExtension="true">config</filter>
+		</fileList>
+	</control>
+	<query>Please Review XML files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

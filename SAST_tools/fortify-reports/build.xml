@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project fortify-reports with libraries in runReport_lib">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+	<property name="dir.mvnrepo" value="C:/Users/kalaises/.m2/repository"/>
+    <property name="dir.jarfile" value="C:/myDrive/work/poc/SAST_tools/fortify-reports"/>
+    <target name="create_run_jar">
+        <delete dir="${dir.jarfile}/runReport_lib"/>
+        <mkdir dir="${dir.jarfile}/runReport_lib"/>
+        <jar destfile="${dir.jarfile}/runReport_lib/runReport.jar">
+            <manifest>
+                <attribute name="Main-Class" value="com.dhl.tools.fortify.reports.GenReport"/>
+				<attribute name="Class-Path" value=". ../Core/lib/bcprov-jdk15on-1.70.jar ../Core/lib/castor-core-1.3.3.jar ../Core/lib/castor-xml-1.3.3.jar ../Core/lib/commons-collections-3.2.2.jar ../Core/lib/commons-io-2.15.1.jar ../Core/lib/commons-lang-2.6.jar ../Core/lib/commons-logging-1.3.0.jar ../Core/lib/fortify-common-24.2.0.0019.jar ../Core/lib/fortify-crypto-1.0.jar ../Core/lib/fortify-meta-api-24.2.0.0019.jar ../Core/lib/fortify-meta-impl-24.2.0.0019.jar ../Core/lib/fortify-public-24.2.0.0019.jar ../Core/lib/gson-2.10.1.jar ../Core/lib/istack-commons-runtime-4.2.0.jar ../Core/lib/jakarta.activation-1.2.2.jar ../Core/lib/jakarta.activation-api-1.2.2.jar ../Core/lib/jakarta.xml.bind-api-2.3.3.jar ../Core/lib/javax.activation-api-1.2.0.jar ../Core/lib/javax.inject-1.jar ../Core/lib/jaxb-api-2.3.1.jar ../Core/lib/jaxb-core-2.3.0.1.jar ../Core/lib/jaxb-impl-2.3.8.jar ../Core/lib/jaxb-xjc-2.3.8.jar ../Core/lib/jfreechart-1.5.4.jar ../Core/lib/jsoup-1.16.1.jar ../Core/lib/juniversalchardet-2.4.0.jar ../Core/lib/log4j-api-2.17.2.jar ../Core/lib/log4j-core-2.17.2.jar ../Core/lib/model-24.2.0.0019.jar ../Core/lib/openpdf-1.3.30.jar ../Core/lib/oro-2.0.8.jar ../Core/lib/slf4j-api-2.0.9.jar ../Core/lib/slf4j-simple-2.0.9.jar ../Core/lib/spring-aop-5.3.29.jar ../Core/lib/spring-beans-5.3.29.jar ../Core/lib/spring-context-5.3.29.jar ../Core/lib/spring-core-5.3.29.jar ../Core/lib/spring-expression-5.3.29.jar ../Core/lib/spring-jcl-5.3.29.jar ../Core/lib/stax-1.2.0.jar ../Core/lib/stax-api-1.0-2.jar ../Core/lib/tpobjects-24.2.0.0019.jar ../Core/lib/tpparsers-24.2.0.0019.jar ../Core/lib/wsobjects-24.2.0.0019.jar ./poi-ooxml-schemas-4.1.2.jar ./xmlbeans-3.1.0.jar ./poi-ooxml-4.1.2.jar ./curvesapi-1.06.jar ./poi-4.1.2.jar ./commons-codec-1.13.jar ./commons-collections4-4.4.jar ./commons-math3-3.6.1.jar ./SparseBitSet-1.2.jar ./commons-compress-1.18.jar"/>
+            </manifest>
+            <fileset dir="${dir.jarfile}/target/classes"/>
+        </jar>
+        <copy file="${dir.mvnrepo}/org/apache/poi/poi-ooxml-schemas/4.1.2/poi-ooxml-schemas-4.1.2.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/xmlbeans/xmlbeans/3.1.0/xmlbeans-3.1.0.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/poi/poi-ooxml/4.1.2/poi-ooxml-4.1.2.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/com/github/virtuald/curvesapi/1.06/curvesapi-1.06.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/poi/poi/4.1.2/poi-4.1.2.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/commons-codec/commons-codec/1.13/commons-codec-1.13.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar" todir="${dir.jarfile}/runReport_lib"/>
+        <copy file="${dir.mvnrepo}/org/apache/commons/commons-compress/1.18/commons-compress-1.18.jar" todir="${dir.jarfile}/runReport_lib"/>
+    </target>
+</project>

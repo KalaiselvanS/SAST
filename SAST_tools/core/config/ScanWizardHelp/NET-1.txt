@@ -1,0 +1,2 @@
+Scan Wizard attempts to identify paths to folders that contain third-party DLLs used for class resolution during .NET application scans. Review the list of files to ensure that none were missed. Because SCA resolves all standard .NET framework DLLs, you do not need to add these to the reference list.
+

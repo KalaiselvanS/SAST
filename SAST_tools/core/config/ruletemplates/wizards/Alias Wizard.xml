@@ -1,0 +1,20 @@
+<AliasRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <From>
+        <NamespaceName>
+            <Pattern>%From.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%From.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%From.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </From>
+    <To>
+        <NamespaceName>%To.NamespaceName%</NamespaceName>
+        <ClassName>%To.ClassName%</ClassName>
+        <FunctionName>%To.FunctionName%</FunctionName>
+    </To>
+</AliasRule>

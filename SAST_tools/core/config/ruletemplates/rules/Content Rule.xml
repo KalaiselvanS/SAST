@@ -1,0 +1,9 @@
+<ContentRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom></VulnKingdom>
+    <VulnCategory></VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity></DefaultSeverity>
+    <Description></Description>
+    <XPathMatch expression=""/>
+</ContentRule>

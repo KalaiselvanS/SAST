@@ -1,0 +1,42 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 117</Group>
+        <Group name="altcategoryOWASP2004">A1 Unvalidated Input</Group>
+        <Group name="altcategoryOWASP2007">A2 Injection Flaws</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.1, 10.5.2</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.2, 10.5.2</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I, APP3690.2 CAT II, APP3690.4 CAT II</Group>
+        <Group name="altcategoryWASC24+2">None</Group>
+        <Group name="coveredRTA">Not Protected</Group>
+        <Group name="Accuracy">4</Group>
+        <Group name="Impact">2.5</Group>
+        <Group name="RemediationEffort">2</Group>
+        <Group name="Probability">3</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>%VulnKingdom%</VulnKingdom>
+    <VulnCategory>%VulnCategory%</VulnCategory>
+    <DefaultSeverity>%DefaultSeverity%</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.log_forging">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            %Conditional%
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

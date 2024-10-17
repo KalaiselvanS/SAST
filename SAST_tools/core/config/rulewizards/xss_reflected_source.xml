@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="xss_reflected_source_rule">
+	<Name>Cross Site Scripting Reflected Source Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Apex</LanguageName>
+			<LanguageValue>apex</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Go</LanguageName>
+			<LanguageValue>golang</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Kotlin</LanguageName>
+			<LanguageValue>kotlin</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>PHP</LanguageName>
+			<LanguageValue>php</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Python</LanguageName>
+			<LanguageValue>python</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+		<Key>Rule Type</Key>
+		<Value>DataflowSourceRule</Value>
+	</Attribute>
+	<Attribute>
+		<Key>Category</Key>
+		<Value>Cross-Site Scripting</Value>
+	</Attribute>
+	<Attribute>
+		<Key>Subcategory</Key>
+		<Value>Reflected</Value>
+	</Attribute>
+	<Description formatVersion="3.2">Cross-Site Scripting Reflected Source Rule identifies a function that is a source of user input, typically a web request, which, if not properly validated, can cause the browser to execute malicious code.</Description>
+	<PredefinedVars>
+		<PredefinedVar>
+			<VarName>TaintFlags</VarName>
+			<VarValue>+XSS,+WEB</VarValue>
+		</PredefinedVar>
+	</PredefinedVars>
+	<WizardTemplate>
+		<Page type="functionPage">
+			<Name>Source Function Information</Name>
+			<Help>Enter Namespace, class, and function for your source here</Help>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the source function is in</Help>
+				<TextBoxValueSet>
+					<Key>FunctionIdentifier.NamespaceName</Key>
+				</TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the source function is in</Help>
+				<TextBoxValueSet>
+					<Key>FunctionIdentifier.ClassName</Key>
+				</TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the source Function</Help>
+				<TextBoxValueSet>
+					<Key>FunctionIdentifier.FunctionName</Key>
+				</TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Data Source Information</Name>
+			<Help>Information about where tainted data comes from</Help>
+			<PrePopInput>
+				<Name>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED_INPUT%</Name>
+				<Help>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED_INPUT%</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_RETURN%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_RETURN%</Help>
+					<ValueSet>
+						<Key>OutArguments</Key>
+						<Value>return</Value>
+					</ValueSet>
+				</PrePopChoice>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+						<Key>OutArguments</Key>
+						<Value>this</Value>
+					</ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+					<TextBoxValueSet>
+						<Key>OutArguments</Key>
+					</TextBoxValueSet>
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>XssSource Wizard.xml</RuleTemplateLocation>
+</Rule>

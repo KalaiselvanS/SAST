@@ -1,0 +1,13 @@
+Select the files to include in your scan.
+
+By default, the source tree on the right includes the files for all languages in the specified directory, and the <b>Languages Included in Scan</b> panel lists the number of files found for each language.
+
+To display the files only for a single language, from the <b>Show Languages in Source Tree</b> list, select the language.
+
+To exclude a subset of the language or languages in the project directory from the scan, in the <b>Languages Included in Scan</b> panel, clear the check boxes for the languages to exclude.   
+  
+To include another project directory in the scan, click <b>Add Project Root</b>, and then navigate to and select the additional directory.
+
+To use an SCA Build Integration option, under <b>Enable Build Integration</b>, select the check box for the option you want to use. Selecting a build integration option disables the associated language selections in the <b>Show Languages in Source Tree</b> list. For example, if you select <b>Ant</b>, the <b>Java</b> language check box is disabled. This prevents Fortify Static Code Analyzer from translating the same files multiple times.
+
+Use <b>Enable ScanCentral Remote Translation</b>  to translate the project remotely. Only one project can be selected.

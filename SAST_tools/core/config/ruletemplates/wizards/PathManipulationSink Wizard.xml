@@ -1,0 +1,44 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 73</Group>
+        <Group name="altcategoryOWASP2004">A1 Unvalidated Input</Group>
+        <Group name="altcategoryOWASP2007">A4 Insecure Direct Object Reference</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.1</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.4</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I, APP3600 CAT II</Group>
+        <Group name="altcategoryWASC24+2">Path Traversal</Group>
+        <Group name="coveredRTA">Not Protected</Group>
+        <Group name="Accuracy">4</Group>
+        <Group name="Impact">3</Group>
+        <Group name="RemediationEffort">3</Group>
+        <Group name="Probability">4</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Input Validation and Representation</VulnKingdom>
+    <VulnCategory>Path Manipulation</VulnCategory>
+    <DefaultSeverity>3.0</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.path_manipulation">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            <Not>
+                <TaintFlagSet taintFlag="VALIDATED_PATH_MANIPULATION"/>
+            </Not>
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

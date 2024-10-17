@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+	<type id="ANT" description="Ant" touchless="true">
+		<disableLanguage>java</disableLanguage>
+		<filterList>
+			<filter isExtension="false">build.xml</filter>
+		</filterList>
+	</type>
+	<type id="OBJC" description="Xcode" touchless="true">
+		<filterList>
+			<filter isExtension="false">project.pbxproj</filter>
+		</filterList>
+	</type>
+	<type id="CPP" description="Makefile" touchless="true">
+		<filterList>
+			<filter isExtension="false">makefile</filter>
+		</filterList>
+	</type>
+	<type id="VISUALSTUDIO" description="Visual Studio" touchless="true">
+		<disableLanguage>dotnet</disableLanguage>
+		<filterList>
+			<filter isExtension="true">sln</filter>
+		</filterList>
+	</type>
+	<type id="MSBUILD" description="MSBuild" touchless="true" scanCentralBuildTool="true">
+		<disableLanguage>dotnet</disableLanguage>
+		<filterList>
+			<filter isExtension="true">sln</filter>
+		</filterList>
+	</type>
+	<type id="MVN" description="Maven" touchless="true" scanCentralBuildTool="true">
+		<disableLanguage>java,sql,kotlin</disableLanguage>
+		<filterList>
+		    <filter isExtension="false">pom.xml</filter>
+		</filterList>
+	</type>
+	<type id="GRADLE" description="Gradle" scanCentralBuildTool="true">
+		<disableLanguage>java</disableLanguage>
+		<filterList>
+		    <filter isExtension="true">gradle</filter>
+		</filterList>
+	</type>
+
+    <type id="java" description="Java">
+        <filterList>
+            <filter isExtension="true">java</filter>
+            <filter isExtension="true">properties</filter>
+            <filter isExtension="true">ini</filter>
+        </filterList>
+        <firstScreen>JAVA-1</firstScreen>
+        <icon>java.png</icon>
+    </type>
+    <type id="kotlin" description="Kotlin">
+        <filterList>
+            <filter isExtension="true">kt</filter>
+            <filter isExtension="true">ktm</filter>
+            <filter isExtension="true">kts</filter>
+        </filterList>
+        <firstScreen>KOTLIN-1</firstScreen>
+        <icon>kotlin.png</icon>
+    </type>
+    <type id="xml" description="XML">
+        <filterList>
+            <filter isExtension="true">xml</filter>
+            <filter isExtension="true">xsd</filter>
+            <filter isExtension="true">xmi</filter>
+            <filter isExtension="true">wsdd</filter>
+            <filter isExtension="true">config</filter>
+        </filterList>
+        <icon>xml.png</icon>
+    </type>
+    <type id="sql" description="SQL">
+        <filterList>
+            <filter isExtension="true">sql</filter>
+            <filter isExtension="true">pks</filter>
+            <filter isExtension="true">pkh</filter>
+            <filter isExtension="true">pkb</filter>
+        </filterList>
+        <firstScreen>SQL-1</firstScreen>
+        <icon>sql.png</icon>
+    </type>
+    <type id="javascript" description="JavaScript / TypeScript">
+        <filterList>
+            <filter isExtension="true">js</filter>
+            <filter isExtension="true">ts</filter>
+            <filter isExtension="true">tsx</filter>
+        </filterList>
+        <verifier name="HigherOrderEnabler" />
+        <icon>js.png</icon>
+    </type>
+    <type id="php" description="PHP">
+        <filterList>
+            <filter isExtension="true">php</filter>
+            <filter isExtension="true">ctp</filter>
+        </filterList>
+        <icon>php.png</icon> 
+    </type>
+    <type id="html" description="HTML">
+        <filterList>
+            <filter isExtension="true">htm</filter>
+            <filter isExtension="true">html</filter>
+        </filterList>
+        <icon>html.png</icon>
+    </type>
+    <type id="vb6" description="Visual Basic 6">
+        <filterList>
+            <filter isExtension="true">vbs</filter>
+            <filter isExtension="true">bas</filter>
+            <filter isExtension="true">frm</filter>
+            <filter isExtension="true">ctl</filter>
+            <filter isExtension="true">cls</filter>
+    </filterList>
+    <icon>vb.png</icon>
+    </type>
+    <type id="ASP" description="Classic ASP">
+        <filterList>
+            <filter isExtension="true">asp</filter>
+    </filterList>
+    <firstScreen>ASP-1</firstScreen>
+    <icon>asp.png</icon>
+    </type>
+    <type id="jsp" description="JSP J2EE">
+        <filterList>
+            <filter isExtension="true">jsp</filter>
+            <filter isExtension="true">jspx</filter>
+            <filter isExtension="true">tag</filter>
+            <filter isExtension="true">tagx</filter>
+            <filter isExtension="true">xhtml</filter>
+            <filter isExtension="true">faces</filter>
+            <filter isExtension="true">jsff</filter>
+    </filterList>
+    <icon>jsp.png</icon>
+    </type>
+    <type id="cfml" description="ColdFusion">
+        <filterList>
+            <filter isExtension="true">cfm</filter>
+            <filter isExtension="true">cfml</filter>
+            <filter isExtension="true">cfc</filter>
+        </filterList>
+        <firstScreen>CFML-1</firstScreen>
+        <icon>coldfusion.png</icon>
+    </type>
+    <type id="abap" description="ABAP">
+        <filterList>
+            <filter isExtension="true">abap</filter>
+    </filterList>
+    <icon>abap.jpg</icon>
+    </type>
+    <type id="go" description="Go">
+        <filterList>
+            <filter isExtension="true">go</filter>
+            <filter isExtension="false">go.mod</filter>
+        </filterList>
+        <firstScreen>GO-1</firstScreen>
+        <icon>go.png</icon>
+    </type>
+    <type id="python" description="Python">
+        <filterList>
+            <filter isExtension="true">py</filter>
+        </filterList>
+        <firstScreen>PYTHON-1</firstScreen>
+        <icon>py.png</icon>
+    </type>
+    <type id="dotnet" description="C#.NET / VB.NET">
+        <filterList>
+        	<filter isExtension="true">cs</filter>
+        	<filter isExtension="true">cshtml</filter>
+            <filter isExtension="true">exe</filter>
+            <filter isExtension="true">dll</filter>
+            <filter isExtension="true">mod</filter>
+            <filter isExtension="true">mdl</filter>
+            <filter isExtension="true">aspx</filter>
+            <filter isExtension="true">master</filter>
+            <filter isExtension="true">vb</filter>
+            <filter isExtension="true">vbhtml</filter>
+        </filterList>
+        <firstScreen>NET-1</firstScreen>
+        <verifier name="DotNetLanguage" />
+        <icon>dotnet.png</icon>
+    </type>
+    <type id="flex" description="Flex / Action Script">
+        <filterList>
+            <filter isExtension="true">mxml</filter>
+            <filter isExtension="true">as</filter>
+        </filterList>
+        <firstScreen>FLEX-1</firstScreen>
+        <icon>flex.png</icon>
+    </type>
+	<type id="bytecode" description="Java Bytecode">
+		<filterList>
+			<filter isExtension="true">jar</filter>
+			<filter isExtension="true">class</filter>
+		</filterList>
+		<firstScreen>JAVA_BYTECODE-1</firstScreen>
+		<icon>jar.gif</icon>
+	</type>
+</languages>

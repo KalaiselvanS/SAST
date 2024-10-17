@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="GO-2" isLanguageScreen="true" language="go">
+	<control>
+		<argument type="switch" useQuotes="true">-goroot</argument>
+		<directoryList sep=";" />
+	</control>
+	<query>Go Standard Libraries</query>
+	<help>GO-2.txt</help>
+	<transition />
+</screen>

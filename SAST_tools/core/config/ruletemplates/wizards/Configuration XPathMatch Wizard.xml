@@ -1,0 +1,15 @@
+<ConfigurationRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Environment</VulnKingdom>
+    <VulnCategory>Generic</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes><![CDATA[The <ConfigFile>; element only supports using either the child element <Pattern> or <Value> per rule. The XPatchMatch reporton attribute is optional and should be removed from the rule if it is not required.]]></Notes>
+    <Description>
+        <Explanation append="true">This issue is being reported by a custom XPathMatch Configuration rule.</Explanation>
+    </Description>
+    <ConfigFile type="%ConfigFile.Type%">
+        <Pattern>%Pattern%</Pattern>
+    </ConfigFile>
+    <XPathMatch expression="%Expression%" reporton="%ReportOn%"/>
+</ConfigurationRule>

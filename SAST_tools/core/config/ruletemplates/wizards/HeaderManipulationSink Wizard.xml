@@ -1,0 +1,56 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 113</Group>
+        <Group name="altcategoryOWASP2004">A1 Unvalidated Input</Group>
+        <Group name="altcategoryOWASP2007">A2 Injection Flaws</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.1</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.2</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I</Group>
+        <Group name="altcategoryWASC24+2">HTTP Response Splitting</Group>
+        <Group name="coveredRTA">Protected</Group>
+        <Group name="Accuracy">4</Group>
+        <Group name="Impact">3</Group>
+        <Group name="RemediationEffort">1</Group>
+        <Group name="Probability">3</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Input Validation and Representation</VulnKingdom>
+    <VulnCategory>Header Manipulation</VulnCategory>
+    <DefaultSeverity>4.0</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.header_manipulation">
+      <Explanation append="true">This issue is being reported by a custom rule.</Explanation>
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            <And>
+                <Or>
+                    <TaintFlagSet taintFlag="WEB"/>
+                    <TaintFlagSet taintFlag="DATABASE"/>
+                    <TaintFlagSet taintFlag="LDAP"/>
+                    <TaintFlagSet taintFlag="XML"/>
+                    <TaintFlagSet taintFlag="FORM"/>
+                    <TaintFlagSet taintFlag="NAMING"/>
+                    <TaintFlagSet taintFlag="GUI_FORM"/>
+                </Or>
+                <Not>
+                    <TaintFlagSet taintFlag="VALIDATED_HEADER_MANIPULATION"/>
+                </Not>
+            </And>
+
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

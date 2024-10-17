@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="VB6-1">
+	<language>vb6</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">vbs</filter>
+			<filter isExtension="true">bas</filter>
+			<filter isExtension="true">frm</filter>
+			<filter isExtension="true">ctl</filter>
+			<filter isExtension="true">cls</filter>
+		</fileList>
+	</control>
+	<query>Please Review Visual Basic 6 files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

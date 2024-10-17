@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="extensionType" type="xs:string" />
+	<xs:element name="fileType" type="xs:string" />
+	<xs:element name="firstScreen" type="xs:string" />
+	<xs:element name="icon" type="xs:string" />
+	<xs:element name="disableLanguage" type="xs:string" />
+
+	<xs:attribute name="description" type="xs:string" />
+	<xs:attribute name="id" type="xs:string" />
+	<xs:attribute name="isExtension" type="xs:boolean" />
+    <xs:attribute name="name" type="xs:string" />
+    <xs:attribute name="touchless" type="xs:boolean" />
+	<xs:attribute name="scanCentralBuildTool" type="xs:boolean" />
+
+    <xs:element name="filter">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute ref="isExtension" use="required" />
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+    </xs:element>
+
+    <xs:element name="filterList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="filter" maxOccurs="unbounded" minOccurs="1" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+   <xs:element name="arg">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="id" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="verifier">
+        <xs:complexType>
+            <xs:sequence>
+                  <xs:element ref="arg" maxOccurs="unbounded" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute ref="name" use="required"/>
+        </xs:complexType>
+	</xs:element>
+
+	<xs:element name="type">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="disableLanguage" minOccurs="0" maxOccurs="1" />
+                <xs:element ref="filterList" minOccurs="1" maxOccurs="1" />
+                <xs:element ref="firstScreen" minOccurs="0" maxOccurs="1" />
+		        <xs:element ref="verifier" minOccurs="0" maxOccurs="1" />
+		        <xs:element ref="icon" minOccurs="0" maxOccurs="1" />
+            </xs:sequence>
+            <xs:attribute ref="description" use="required" />
+            <xs:attribute ref="id" use="required" />
+            <xs:attribute ref="touchless" use="optional" />
+			<xs:attribute ref="scanCentralBuildTool" use="optional" />
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="languages">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="type" maxOccurs="unbounded" minOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

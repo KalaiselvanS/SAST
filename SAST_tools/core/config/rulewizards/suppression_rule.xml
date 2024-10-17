@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="suppression_rule">
+    <Name>Suppression Rule</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>Universal</LanguageName>
+            <LanguageValue>universal</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Suppression Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Suppression Rule</Value>
+    </Attribute>
+    <Description formatVersion="3.2">Suppression Rule disables the rule identified by the specified Rule Id.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+       <Page>
+       <Name>Rule ID</Name>
+       <Help>Enter Rule ID for the rule that you would like to disable</Help>
+       <StringInput allowRegexes="false" validation="valid-ruleid" required="true">
+          <Name>RuleID</Name>
+          <Help>Rule ID of the Rule you would like to suppress</Help>
+	  <TextBoxValueSet>
+             <Key>Suppression.RuleId</Key>
+          </TextBoxValueSet>
+       </StringInput>
+      </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Suppression Wizard.xml</RuleTemplateLocation>
+</Rule>

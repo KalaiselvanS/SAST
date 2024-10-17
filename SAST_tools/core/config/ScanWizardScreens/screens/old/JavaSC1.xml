@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-1">
+	<language>java</language>
+	<argument type="empty"></argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="Select files to Scan" isDefault="true"  transition="JAVA-2"/>
+			<radioButton description="Use ANT Integration" isDefault="false" transition="ANT-1" />
+		</radioButtonGroup>
+	</control>
+	<query>How would you like SCA to gather files to be scanned?</query>
+	<help/>
+	<transition />
+</screen>

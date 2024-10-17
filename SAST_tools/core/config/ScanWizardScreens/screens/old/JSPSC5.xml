@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JSP-5">
+	<language>jsp</language>
+	<argument type="switch">-appserver-home</argument>
+	<control>
+		<directorySelect description="Directory containing server/lib" />
+	</control>
+	<query>Please specify the path to the directory containing the server/lib directory</query>
+	<help/>
+	<transition>JSP-6</transition>
+</screen>

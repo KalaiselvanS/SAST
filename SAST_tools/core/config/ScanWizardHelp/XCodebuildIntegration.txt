@@ -1,0 +1,3 @@
+To update the <b>Build Integration Settings</b> that you want SCA to use in the project translation, select the <b>Xcode Files</b>. 
+
+Modifying the targets will update the command, and you can also override that to construct the command manually.

@@ -1,0 +1,5 @@
+Specifies a list of colon-separated (Linux and MacOS) or semicolon-separated (Windows) list of directories to look for Go code to resolve import statements. Use this option if your Go program imports a package that is not from a standard library.
+
+If this option is not specified, then the GOPATH system environment variable is used. If the environment variable is not set, then the Go path defaults to a subdirectory named go in the user's home directory ($HOME/go on Linux and MacOS and %USERPROFILE%\go on Windows), unless that directory contains a Go distribution
+
+<b>Note</b>: Every directory in the Go path list must include a src subdirectory. When Fortify Static Code Analyzer resolves non-library import statements, it searches for the imported package recursively in all the src directories included in the Go path list.

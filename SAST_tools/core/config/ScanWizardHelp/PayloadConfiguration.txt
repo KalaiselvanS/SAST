@@ -1,0 +1,7 @@
+Configure the relative paths to the project and the dependency folders.
+
+To enable your build configuration file to be used on any machine, specify the relative path to the project roots and dependency folders. These values should be set by the build procedure.
+
+The <b>root</b> variable is usually the folder where your build starts. By default, it is the parent of all project roots.
+
+You can specify any variable you need for your build procedure.

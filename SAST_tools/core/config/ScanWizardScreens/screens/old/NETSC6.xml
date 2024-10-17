@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen name="NET-6">
+	<language>dotnet</language>
+	<argument type="property">-Dcom.fortify.sca.IldasmPath</argument>
+	<control>
+		<fileSelect>
+			<filter isExtension="false">ildasm.exe</filter>
+		</fileSelect>
+	</control>
+	<query>Please specify Ildasm.exe</query>
+	<help/>
+	<transition></transition>
+</screen>

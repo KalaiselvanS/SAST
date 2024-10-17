@@ -1,0 +1,18 @@
+<DataflowPassthroughRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <TaintFlags>%TaintFlags%</TaintFlags>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <InArguments>%InArguments%</InArguments>
+    <OutArguments>%OutArguments%</OutArguments>
+</DataflowPassthroughRule>

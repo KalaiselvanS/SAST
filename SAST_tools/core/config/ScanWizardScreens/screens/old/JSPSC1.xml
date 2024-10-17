@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JSP-1">
+	<language>jsp</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">jsp</filter>
+			<filter isExtension="true">jspx</filter>
+			<filter isExtension="true">tag</filter>
+			<filter isExtension="true">tagx</filter>
+			<filter isExtension="true">xhtml</filter>
+			<filter isExtension="true">faces</filter>
+			<filter isExtension="true">jsff</filter>			
+		</fileList>
+	</control>
+	<query>Please review JSP files to be scanned</query>
+	<help/>
+	<transition>JSP-2</transition>
+</screen>

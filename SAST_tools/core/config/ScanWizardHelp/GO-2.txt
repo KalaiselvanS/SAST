@@ -1,0 +1,3 @@
+Specifies the location of the Go standard library. By default, <path> is set to <sca_install_dir>/Core/go, which contains the standard library of the supported Go release.
+
+<b>Note</b>: Use this option only if your Go code is dependent on standard library specifics of another Go release.

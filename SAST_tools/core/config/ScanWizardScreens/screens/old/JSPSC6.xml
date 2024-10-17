@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JSP-6">
+	<language>java</language>
+	<argument type="switch">-appserver-version</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="7" isDefault="false">7</radioButton>
+			<radioButton description="8" isDefault="false">8</radioButton>
+			<radioButton description="9" isDefault="false">9</radioButton>
+			<radioButton description="10" isDefault="true">10</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Please specify the WebLogic version.</query>
+	<help/>
+	<transition/>
+</screen>

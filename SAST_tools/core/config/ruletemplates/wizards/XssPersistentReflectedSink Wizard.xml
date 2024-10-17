@@ -1,0 +1,109 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 79, 80</Group>
+        <Group name="altcategoryOWASP2004">A4 Cross Site Scripting</Group>
+        <Group name="altcategoryOWASP2007">A1 Cross Site Scripting (XSS)</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.4</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.1</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I, APP3580 CAT I</Group>
+        <Group name="altcategoryWASC24+2">Cross-site Scripting</Group>
+        <Group name="coveredRTA">Protected</Group>
+        <Group name="Accuracy">5</Group>
+        <Group name="Impact">5</Group>
+        <Group name="RemediationEffort">1</Group>
+        <Group name="Probability">5</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%0</RuleID>
+    <VulnKingdom>Input Validation and Representation</VulnKingdom>
+    <VulnCategory>Cross-Site Scripting</VulnCategory>
+    <VulnSubcategory>Reflected</VulnSubcategory>
+    <DefaultSeverity>4.0</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.cross_site_scripting_reflected">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            <And>
+                <TaintFlagSet taintFlag="XSS"/>
+                <Or>
+                    <TaintFlagSet taintFlag="WEB"/>
+                    <TaintFlagSet taintFlag="GUI_FORM"/>
+                    <TaintFlagSet taintFlag="FORM"/>
+                    <TaintFlagSet taintFlag="NETWORK"/>
+                </Or>
+                <Not>
+                    <TaintFlagSet taintFlag="VALIDATED_CROSS_SITE_SCRIPTING_REFLECTED"/>
+                </Not>
+            </And>
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 79, 80</Group>
+        <Group name="altcategoryOWASP2004">A4 Cross Site Scripting</Group>
+        <Group name="altcategoryOWASP2007">A1 Cross Site Scripting (XSS)</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.4</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1, 6.5.1</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I, APP3580 CAT I</Group>
+        <Group name="altcategoryWASC24+2">Cross-site Scripting</Group>
+        <Group name="coveredRTA">Protected</Group>
+        <Group name="Accuracy">5</Group>
+        <Group name="Impact">5</Group>
+        <Group name="RemediationEffort">1</Group>
+        <Group name="Probability">5</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%1</RuleID>
+    <VulnKingdom>Input Validation and Representation</VulnKingdom>
+    <VulnCategory>Cross-Site Scripting</VulnCategory>
+    <VulnSubcategory>Persistent</VulnSubcategory>
+    <DefaultSeverity>4.0</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.cross_site_scripting_persistent">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            <And>
+                <TaintFlagSet taintFlag="XSS"/>
+                <Or>
+                    <TaintFlagSet taintFlag="DATABASE"/>
+                    <TaintFlagSet taintFlag="LDAP"/>
+                    <TaintFlagSet taintFlag="NAMING"/>
+                    <TaintFlagSet taintFlag="XML"/>
+                    <TaintFlagSet taintFlag="WEBSERVICE"/>
+                </Or>
+                <Not>
+                    <TaintFlagSet taintFlag="VALIDATED_CROSS_SITE_SCRIPTING_PERSISTENT"/>
+                </Not>
+            </And>
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

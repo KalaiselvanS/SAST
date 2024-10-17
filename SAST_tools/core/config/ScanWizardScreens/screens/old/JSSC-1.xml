@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JS-1">
+	<language>js</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">js</filter>
+		</fileList>
+	</control>
+	<query>Please Review Javascript files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

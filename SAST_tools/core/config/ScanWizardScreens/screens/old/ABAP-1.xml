@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ABAP-1">
+	<language>abap</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">abap</filter>
+		</fileList>
+	</control>
+	<query>Please review ABAP files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

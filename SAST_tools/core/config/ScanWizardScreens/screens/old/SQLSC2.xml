@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="SQL-2">
+	<language>sql</language>
+	<argument type="property">-Dcom.fortify.sca.fileextensions.sql</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="PL/SQL" isDefault="true">PLSQL</radioButton>
+			<radioButton description="T-SQL" isDefault="false">TSQL</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Please specify SQL type used.</query>
+	<help/>
+	<transition />
+</screen>

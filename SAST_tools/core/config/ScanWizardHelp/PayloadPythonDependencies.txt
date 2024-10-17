@@ -1,0 +1,3 @@
+Specify the python libraries that are used in your projects.
+
+SCA Scan Wizard found that <b>-python-path</b> was specified. To decrease the payload size, Fortify recommends that you deselect the libraries that are not used in your project. Otherwise, all python library folders are packed for upload.

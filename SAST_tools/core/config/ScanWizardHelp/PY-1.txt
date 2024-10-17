@@ -1,0 +1,2 @@
+Specify the path for additional import directories. Fortify Scan Wizard. does not respect the PYTHONPATH environment variable that the Python runtime system uses to find imported files.
+

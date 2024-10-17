@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-3">
+	<language>dotnet</language>
+	<argument type="switch" useQuotes="true">-libdirs</argument>
+	<control>
+		<directoryList sep=";" />
+	</control>
+	<query>Please specify any reference directories</query>
+	<help/>
+	<transition>NET-4</transition>
+</screen>

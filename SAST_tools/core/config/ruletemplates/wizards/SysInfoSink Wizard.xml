@@ -1,0 +1,42 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 497</Group>
+        <Group name="altcategoryOWASP2004">None</Group>
+        <Group name="altcategoryOWASP2007">A6 Information Leakage and Improper Error Handling</Group>
+        <Group name="altcategoryPCI1.1">None</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.5.6</Group>
+        <Group name="altcategorySTIG2">APP3620 CAT II</Group>
+        <Group name="altcategoryWASC24+2">Information Leakage</Group>
+        <Group name="coveredRTA">Protected</Group>
+        <Group name="Accuracy">4</Group>
+        <Group name="Impact">2</Group>
+        <Group name="RemediationEffort">1</Group>
+        <Group name="Probability">1</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>%VulnKingdom%</VulnKingdom>
+    <VulnCategory>%VulnCategory%</VulnCategory>
+    <DefaultSeverity>%DefaultSeverity%</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.system_information_leak">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            %Conditional%
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

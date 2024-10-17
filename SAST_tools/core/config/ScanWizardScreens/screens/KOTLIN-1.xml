@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen name="KOTLIN-1" isLanguageScreen="true" language="kotlin">
+	<control>
+		<argument type="switch" useQuotes="true">-cp</argument>
+		<fileList sep=";" icon="jar" repeat="5">
+			<filter isExtension="true">class</filter>
+			<filter isExtension="true">jar</filter>
+		</fileList>
+	</control>
+	<verifier name="KotlinSourceDependencyVerifier">
+		<arg id="LanguageID">kotlin</arg>
+	</verifier>
+	<query>Review Class Path</query>
+	<help>KOTLIN-1.txt</help>
+	<transition/>
+</screen>

@@ -1,0 +1,6 @@
+To update the <b>Build Integration Settings</b> that you want SCA to use in the project translations, select the <b>Solution Files</b>.
+
+Note that SCA requires full debug information for generated DLLs and EXEs.
+
+Modifying the configuration settings will update the command, and you can also override that to construct the command manually.
+

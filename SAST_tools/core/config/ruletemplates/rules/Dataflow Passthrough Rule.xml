@@ -1,0 +1,21 @@
+<DataflowPassthroughRule formatVersion="%FORMATVERSION%" language="">
+    <RuleID>%RULEID%</RuleID>
+    <TaintFlags></TaintFlags>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern></Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern></Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern></Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+    <Conditional>
+        <ConstantEq argument="" value=""/>
+    </Conditional>
+    <InArguments></InArguments>
+    <OutArguments></OutArguments>
+</DataflowPassthroughRule>

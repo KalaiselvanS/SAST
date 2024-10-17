@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="regex_contentfilenameregex_rule">
+    <Name>Regex Rule for FileNameRegex and ContentRegex</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>Universal</LanguageName>
+            <LanguageValue>universal</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Regex Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">If the RegexRule has both a ContentRegex and a FileNameRegex, then the content of all files whose names match the FileNameRegex are then matched using ContentRegex, and any matches are reported as vulnerabilities.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Regex Search Strings</Name>
+            <Help>Enter regular expressions enclosed in an XML CDATA section to match file names and content.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+                <Name>FileNameRegex String</Name>
+                <Help>Enter a regular expression enclosed in an XML CDATA section to match file names. For example, you can use &lt;![CDATA[(?i)fortify(.zip|.exe)]]&gt; to match the case-insensitive file names "Fortify.zip" and "fortify.exe".</Help>
+                <TextBoxValueSet>
+                    <Key>FileNameRegex</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+                <Name>ContentRegex String</Name>
+                <Help>Enter a regular expression enclosed in an XML CDATA section to match plain text file content. For example, you can use &lt;![CDATA[(?i)fortify]]&gt; to match the case-insensitive string "Fortify".</Help>
+                <TextBoxValueSet>
+                    <Key>ContentRegex</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Regex ContentFileNameRegex Wizard.xml</RuleTemplateLocation>
+</Rule>

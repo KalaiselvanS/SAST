@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="characterization_private_source">
+	<Name>Characterization Rule for Private Taint Source</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>Characterization Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Private Information</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This characterization rule taints the specified field or variable with private taint, which if not properly handled, can compromise user privacy.  This rule will trigger Privacy Violation vulnerability.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+       <Page>
+  	 <Name>Private Taint Source</Name>
+         <Help>Enter the name of the field or variable, as a regular expression, that you would like to taint as a source of private data.</Help>
+         <StringInput allowRegexes="true" validation="valid-regex" required="true">
+	     <Name>Private Source</Name>
+	     <Help>Regular Expression that identifies the source of private data</Help>
+	     <TextBoxValueSet>
+                <Key>PrivateTaintSource.SearchString</Key>
+             </TextBoxValueSet>
+         </StringInput>
+       </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Characterization PrivateSource Wizard.xml</RuleTemplateLocation>
+</Rule>

@@ -1,0 +1,3 @@
+Identify the SQL file types in your project.
+
+<b>Note:</b> The default selection is not meant to identify the version of SQL that is actually used in your code. Select the appropriate version.

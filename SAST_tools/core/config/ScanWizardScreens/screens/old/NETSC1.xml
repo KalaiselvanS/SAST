@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-1">
+	<language>dotnet</language>
+	<argument type="empty"></argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="Use Visual Studio Plugin" isDefault="true"  transition="VS-1"/>
+			<radioButton description="Select the compiled binaries" isDefault="false" transition="NET-2" />
+		</radioButtonGroup>
+	</control>
+	<query>How would you like SCA to gather files to be scanned?</query>
+	<help/>
+	<transition />
+</screen>

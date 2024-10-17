@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="CFML-1"  isLanguageScreen="true" language="cfml">
+	<control>
+		<argument type="switch">-source-base-dir</argument>
+		<directorySelect description="Web applications root directory" />
+	</control>
+	<query>Cold Fusion Root</query>
+	<help>CFML-1.txt</help>
+	<transition />
+</screen>

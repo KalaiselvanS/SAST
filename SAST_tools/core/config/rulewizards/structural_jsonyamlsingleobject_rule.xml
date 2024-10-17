@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="structural_terraformblock_rule">
+    <Name>Structural Rule for Cloud Configuration in Single Object</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>JSON</LanguageName>
+            <LanguageValue>json</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>YAML</LanguageName>
+            <LanguageValue>yaml</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Structural Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">The Structural Rule for Cloud Configuration in Single Object identifies an individual configuration by matching against a name and value pair contained in an individual JSON or YAML object.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Cloud Configuration Information</Name>
+            <Help>Enter the values for each.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Configuration Pair Name</Name>
+                <Help>Enter the name of a provider specific configuration pair. For example, enter "BlockPublicAcls" to identify a configuration set in AWS resource types.</Help>
+                <TextBoxValueSet>
+                    <Key>Name</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Configuration Pair Value</Name>
+                <Help>Enter the value of a provider specific configuration pair. For example, the AWS S3 "BlockPublicAcls" configuration setting accepts boolean values of either "true" or "false".</Help>
+                <TextBoxValueSet>
+                    <Key>Value</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Structural JSONYAMLSingleObject Wizard.xml</RuleTemplateLocation>
+</Rule>

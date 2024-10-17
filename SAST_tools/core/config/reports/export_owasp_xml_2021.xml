@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ReportDefinition type="standard">
+    <TemplateName>export_owasp_xml_2021</TemplateName>
+    <TemplatePath>C:\Fortify\Fortify_Apps_and_Tools_24.2.0\Core\config\reports\export_owasp_xml_2021.xml</TemplatePath>
+    <LogoPath>/MF_logo.png</LogoPath>
+    <Footnote>Copyright 2022 Micro Focus or one of its affiliates.</Footnote>
+    <UserName>kalaises</UserName>
+    <ReportSection enabled="true" optionalSubsections="true">
+        <Title>Results Outline</Title>
+        <SubSection enabled="true">
+            <Title>Overall number of results</Title>
+            <Description>Results count</Description>
+            <Text>The scan found $TOTAL_FINDINGS$ issues.</Text>
+        </SubSection>
+        <SubSection enabled="true">
+            <Title>Vulnerability Examples by Category</Title>
+            <Description>Results summary for critical and high priority issues.  Vulnerability examples are provided by category.</Description>
+            <IssueListing listing="true" limit="-1" externalCategoryType="OWASP Top 10 2021">
+                <Refinement></Refinement>
+                <Chart chartType="list">
+                    <Axis>Category</Axis>
+                    <MajorAttribute>Analysis</MajorAttribute>
+                </Chart>
+            </IssueListing>
+        </SubSection>
+    </ReportSection>
+</ReportDefinition>

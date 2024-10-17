@@ -1,0 +1,11 @@
+<RegexRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnCategory>Generic ContentRegex Rule</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes>The regular expression must be enclosed in an XML CDATA section to match plain text file content. Add the XML CDATA to encapsulate the regular expression. As an example, you can use &lt;![CDATA[(?i)fortify]]&gt; to match the case-insensitive string "Fortify".</Notes>
+    <Description formatVersion="3.2">
+        <Explanation append="true">This issue is being reported by a custom ContentRegex rule.</Explanation>
+    </Description>
+    <ContentRegex><![CDATA[%ContentRegex%]]></ContentRegex>
+</RegexRule>

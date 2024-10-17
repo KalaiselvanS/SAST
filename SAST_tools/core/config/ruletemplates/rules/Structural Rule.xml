@@ -1,0 +1,11 @@
+<StructuralRule formatVersion="%FORMATVERSION%" language="">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom></VulnKingdom>
+    <VulnCategory></VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity></DefaultSeverity>
+    <Description></Description>
+    <Predicate><![CDATA[
+
+    ]]></Predicate>
+</StructuralRule>

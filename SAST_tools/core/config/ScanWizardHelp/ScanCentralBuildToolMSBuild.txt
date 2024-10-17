@@ -1,0 +1,7 @@
+Specify ScanCentral build options
+
+<b>Build file location:</b>  Type the build file name. Required for .NET solutions.
+
+<b>Build command options:</b>  Optionally type any custom build options needed to prepare and build the project.
+
+<b>Additional translation options:</b> Optionally type Fortify Static Code Analyzer translation options.

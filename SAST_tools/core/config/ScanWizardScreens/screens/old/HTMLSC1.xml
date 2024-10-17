@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="HTML-1">
+	<language>html</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">htm</filter>
+			<filter isExtension="true">html</filter>
+		</fileList>
+	</control>
+	<query>Please Review HTML files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

@@ -1,0 +1,2 @@
+Point to the root of a valid flex SDK. The folder should contain a framework that includes a <b>flex-config.xml</b> file. It should also contain a bin folder that contains an <b>mxmlc</b> executable.
+

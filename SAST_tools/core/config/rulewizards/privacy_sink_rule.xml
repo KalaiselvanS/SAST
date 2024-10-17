@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="privacy_sink_rule">
+	<Name>Privacy Violation Sink Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Go</LanguageName>
+			<LanguageValue>golang</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Kotlin</LanguageName>
+			<LanguageValue>kotlin</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>PHP</LanguageName>
+			<LanguageValue>php</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Python</LanguageName>
+			<LanguageValue>python</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowSinkRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Privacy Violation</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_SINK_PRIVACY%</Description>
+	<PredefinedVars>
+        <PredefinedVar>
+            <VarName>VulnKingdom</VarName>
+            <VarValue>Security Features</VarValue>
+        </PredefinedVar>
+        <PredefinedVar>
+            <VarName>VulnCategory</VarName>
+            <VarValue>Privacy Violation</VarValue>
+        </PredefinedVar>
+        <PredefinedVar>
+            <VarName>DefaultSeverity</VarName>
+            <VarValue>3.0</VarValue>
+        </PredefinedVar>
+        <PredefinedVar>
+            <VarName>Conditional</VarName>
+            <VarValue><![CDATA[<And>
+                            <Not>
+                                <TaintFlagSet taintFlag="VALIDATED_PRIVACY_VIOLATION"/>
+                            </Not>
+                            <TaintFlagSet taintFlag="PRIVATE"/>
+                            <Not>
+                                <TaintFlagSet taintFlag="STRING_LENGTH"/>
+                            </Not>
+                        </And>]]></VarValue>
+        </PredefinedVar>
+	</PredefinedVars>
+	<WizardTemplate>
+		<Page type="functionPage">
+			<Name>Privacy Violation Function Information</Name>
+            <Help>Enter Information about function that is the sink for the privacy violation information</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the sink function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the sink function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the sink Function</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Data Sink Information</Name>
+			<Help>Information about where this variable can't end up</Help>
+			<PrePopInput>
+				<Name>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Name>
+                <Help>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>InArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>InArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>PrivacySink Wizard.xml</RuleTemplateLocation>
+</Rule>

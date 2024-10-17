@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-1" isLanguageScreen="true" language="java">
+	<control>
+		<argument type="switch" useQuotes="true">-cp</argument>
+		<fileList sep=";" icon="jar" repeat="5">
+			<filter isExtension="true">class</filter>
+			<filter isExtension="true">jar</filter>
+		</fileList>
+	</control>
+    <verifier name="JavaSourceDependencyVerifier">
+        <arg id="LanguageID">java,jsp</arg>
+    </verifier>
+	<query>Review Class Path</query>
+	<help>JAVA-1.txt</help>
+	<transition>JAVA-2</transition>
+</screen>

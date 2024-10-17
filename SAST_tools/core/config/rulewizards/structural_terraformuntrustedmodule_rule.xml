@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="structural_terraformuntrustedmodule_rule">
+    <Name>Terraform Bad Practices: Untrusted Module in Use</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>HCL</LanguageName>
+            <LanguageValue>hcl</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Structural Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Terraform Bad Practices</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This template creates a rule to scan Terraform configurations and identify untrusted modules. The rule is based on matching the source argument in a module block against a user-provided allow list of modules, registries, and/or repositories.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Module Allow List Entry</Name>
+            <Help>Enter an allow list for trusted modules using the convention followed by the modules, registries, and/or repositories in use.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Allow List</Name>
+                <Help>Enter an allow list for trusted modules. The provided list can consist of an individual explicit entry, an explicit list delimited by the "|" character, or a regular expression that matches the intended allow list.</Help>
+                <TextBoxValueSet>
+                    <Key>AllowList</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Structural TerraformUntrustedModule Wizard.xml</RuleTemplateLocation>
+</Rule>

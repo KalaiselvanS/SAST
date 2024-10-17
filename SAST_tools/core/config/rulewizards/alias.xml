@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="alias_rule">
+	<Name>Alias Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>Alias Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Alias Rule</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_ALIAS%</Description>
+	<PredefinedVars />
+	<WizardTemplate>
+		<Page type="functionPage">
+			<Name>Alias Function Information</Name>
+            <Help>Enter Namespace, Class, and Function information for the alias function to be created</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the alias function to be created is in</Help>
+				<TextBoxValueSet>
+                    <Key>From.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the alias function to be created is in</Help>
+				<TextBoxValueSet>
+                    <Key>From.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>The alias function Name</Help>
+				<TextBoxValueSet>
+                    <Key>From.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page type="functionPage">
+			<Name>Aliased Function Information</Name>
+            <Help>Enter Namespace, Class, and Function information for the aliased function</Help>
+            <StringInput allowRegexes="false" validation="valid-name" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the aliased function is in</Help>
+				<TextBoxValueSet>
+                    <Key>To.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="false" validation="valid-name" required="false">
+				<Name>Class:</Name>
+				<Help>Class the aliased function is in</Help>
+				<TextBoxValueSet>
+                    <Key>To.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-name" required="true">
+				<Name>Function:</Name>
+				<Help>The function to be aliased</Help>
+				<TextBoxValueSet>
+                    <Key>To.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>Alias Wizard.xml</RuleTemplateLocation>
+</Rule>

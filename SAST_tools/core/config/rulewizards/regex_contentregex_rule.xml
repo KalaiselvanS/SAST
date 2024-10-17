@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="regex_contentregex_rule">
+    <Name>Regex Rule for ContentRegex</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>Universal</LanguageName>
+            <LanguageValue>universal</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Regex Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">If the RegexRule has a ContentRegex, but not a FileNameRegex, then the content of all files are matched on the ContentRegex, and any matches are reported as vulnerabilities.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>ContentRegex Search String</Name>
+            <Help>Enter a regular expression to match file content.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>ContentRegex String</Name>
+                <Help>Enter a regular expression to match file content. </Help>
+                <TextBoxValueSet>
+                    <Key>ContentRegex</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Regex ContentRegex Wizard.xml</RuleTemplateLocation>
+</Rule>

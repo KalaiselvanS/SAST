@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JSP-2">
+	<language>jsp</language>
+	<argument type="property">-Dcom.fortify.sca.jsp.UseNativeParser</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="Yes, use native parser (recommended)" isDefault="true" transition="">true</radioButton>
+			<radioButton description="No, use the default external precompiler (Tomcat/Jasper2)" isDefault="false" transition="">false</radioButton>
+			<radioButton description="No, define a precompiler" isDefault="false" transition="JSP-3">false</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Would you like to use native JSP Parsing? Or would you like to define a JSP Precompiler?</query>
+	<help/>
+	<transition/>
+</screen>

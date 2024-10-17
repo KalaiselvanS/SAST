@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ANT-1">
+	<language>java</language>
+	<argument type="touchless" id="ant">ant -buildfile </argument>
+	<control>
+		<fileSelect>
+			<filter isExtension="true">xml</filter>
+			<filter isExtension="false">build.xml</filter>
+		</fileSelect>
+	</control>
+	<query>Please select the ANT build file.</query>
+	<help/>
+	<transition>ANT-2</transition>
+</screen>

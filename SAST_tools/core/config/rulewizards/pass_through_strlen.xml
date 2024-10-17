@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="passthrough_strlen_rule">
+	<Name>Pass-Through Rule that Indicates that Outgoing Value Represents the Length of the String</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowPassthroughRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Passthrough</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_PASS_THROUGH_STRING_LENGTH%</Description>
+	<PredefinedVars>
+        <PredefinedVar>
+            <VarName>TaintFlags</VarName>
+            <VarValue>+STRING_LENGTH</VarValue>
+        </PredefinedVar>
+    </PredefinedVars>
+    <WizardTemplate>
+		<Page type="functionPage">
+			<Name>Pass Through Function Information</Name>
+            <Help>Information about the function that the data passes through</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the passthrough function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the passthrough function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the passthrough Function</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Data Flow Information</Name>
+            <Help>Determine where the data enters and exits the function</Help>
+            <PrePopInput>
+				<Name>%WIZARDPAGE_DATAPROP_QUEST_DATA_ENTERS%</Name>
+				<Help>Where the Data enters the function that passes through</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>InArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>InArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+			<PrePopInput>
+				<Name>%WIZARDPAGE_DATAPROP_QUEST_DATA_PASSES%</Name>
+				<Help>Where the data ends up after the function call</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_RETURN%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_RETURN%</Help>
+					<ValueSet>
+                        <Key>OutArguments</Key>
+                        <Value>return</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>OutArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>OutArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>PassStrlen Wizard.xml</RuleTemplateLocation>
+</Rule>

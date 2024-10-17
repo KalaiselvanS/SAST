@@ -1,0 +1,18 @@
+<ConfigurationRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Environment</VulnKingdom>
+    <VulnCategory>Docker Bad Practices:</VulnCategory>
+    <VulnSubcategory>Untrusted Base Image in Use</VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes><![CDATA[This template creates a rule to scan Dockerfiles and identify the use of untrusted images based on a user-provided allow list. The list can consist of an individual explicit registry entry, an explicit list delimited by the "|" character, or a regular expression that matches the intended allow list.]]></Notes>
+    <Description>
+        <Abstract><![CDATA[This Dockerfile uses an untrusted base image. This issue is being reported by a custom Docker Configuration rule.]]></Abstract>
+        <Explanation append="true"><![CDATA[As a matter of policy, only the following registries and base image registries are permitted:
+            add allow list here]]></Explanation>
+        <Recommendations><![CDATA[As a security best practice, base images should be written from scratch when possible or sourced from registries and repositories of trusted providers. Update the identified Dockerfile FROM instruction to an allowed base image.]]></Recommendations>
+    </Description>
+    <ConfigFile type="docker">
+        <Pattern>.*</Pattern>
+    </ConfigFile>
+    <XPathMatch expression="//Instruction[@name='FROM']//Image[not(matches(text(),'^(%AllowList%)$'))]"/>
+</ConfigurationRule>

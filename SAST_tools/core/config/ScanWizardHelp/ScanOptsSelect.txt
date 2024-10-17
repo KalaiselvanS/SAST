@@ -1,0 +1,19 @@
+Specify how to run your scan and how to handle the output.
+
+<b>Windows Script:</b> Select this check box to generate a script formatted for Windows.  In the <b>Script file location </b> box, enter the directory in which to store the script.
+
+<b>Linux and MacOS Script:</b> Select this check box to generate a script formatted for Linux and MacOS operating systems. In the <b>Script file location </b> box, enter the directory in which to store the script.
+
+<b>Scan phase:</b> Select this check box to initiate an SCA scan of the translated data. This check box is always selected for projects translated remotely with ScanCentral.
+
+<b>Scan results file:</b> To use a file name other than the default shown in the <b>Scan results file</b> box, type a name for the FPR file produced by the scan. Make sure that you include the .fpr file extension in the file name.
+
+<b>Enable quick scan mode:</b> Select this check box to scan the project in quick scan mode.
+
+<b>Upload scan results to SSC:</b> Select this check box to upload the FPR file to Software Security Center.
+
+<b>ScanCentral scan:</b> Select this check box to use ScanCentral to execute the scan phase remotely. This check box is always selected for projects translated remotely with ScanCentral.
+
+<b>Include custom rules:</b> Select this check box to include custom rules in your scan.
+
+<b>Scan memory:</b> Specify the amount of memory SCA uses for scanning.

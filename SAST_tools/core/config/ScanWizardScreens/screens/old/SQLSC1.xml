@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="SQL-1">
+	<language>sql</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">sql</filter>
+			<filter isExtension="true">pks</filter>
+			<filter isExtension="true">pkh</filter>
+			<filter isExtension="true">pkb</filter>
+		</fileList>
+	</control>
+	<query>Please review SQL files to be scanned</query>
+	<help/>
+	<transition>SQL-2</transition>
+</screen>

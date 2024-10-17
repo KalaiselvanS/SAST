@@ -1,0 +1,7 @@
+Instead of scanning the code locally, this process runs the scan remotely using ScanCentral SAST.
+
+<b>Controller URL</b>: Type the URL for the ScanCentral Controller.
+
+<b>Upload scan results to SSC</b>: If you select this option, the FPR is uploaded to Fortify Software Security Center. On the next step, you must provide the Software Security Center URL, application details, and token.
+
+<b>Notification email</b>: Type an email address for ScanCentral job status notifications.

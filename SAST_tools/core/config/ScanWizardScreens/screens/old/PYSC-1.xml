@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="PYTHON-1">
+	<language>python</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">py</filter>
+		</fileList>
+	</control>
+	<query>Please review Python files to be scanned</query>
+	<help/>
+	<transition>PYTHON-2</transition>
+</screen>

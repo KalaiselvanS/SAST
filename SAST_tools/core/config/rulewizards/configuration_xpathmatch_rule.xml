@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="configuration_xpathmatch_rule">
+    <Name>Configuration Rule for XPathMatch</Name>
+    <Language/>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Configuration Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This configuration rule identifies configurations using XPathMatch and is based on the Tomcat File example described in the Custom Rules Guide.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Enter Required Strings for XPathMatch</Name>
+            <Help>Enter Strings required for each of the following.</Help>
+            <StringInput allowRegexes="false" validation="valid-name" required="true">
+                <Name>ConfigFile Type</Name>
+                <Help>Enter the ConfigFile type. Supported types are "docker" and "xml".</Help>
+                <TextBoxValueSet>
+                    <Key>ConfigFile.Type</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>ConfigFile Pattern</Name>
+                <Help>Enter a pattern indicative of the config file naming convention.</Help>
+                <TextBoxValueSet>
+                    <Key>Pattern</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>XPathMatch Expression</Name>
+                <Help>Enter the expression that describes the XML content necessary for the Configuration Analyzer to identify a misconfiguration.</Help>
+                <TextBoxValueSet>
+                    <Key>Expression</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+                <Name>XPathMatch ReportOn</Name>
+                <Help>Enter the ReportOn condition to specify what Fortify Static Code Analyzer reports as the problematic attribute instead of the parent Expression attribute.</Help>
+                <TextBoxValueSet>
+                    <Key>ReportOn</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Configuration XPathMatch Wizard.xml</RuleTemplateLocation>
+</Rule>

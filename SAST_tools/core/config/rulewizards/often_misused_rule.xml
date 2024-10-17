@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="often_misused_rule">
+	<Name>Often Misused Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Go</LanguageName>
+			<LanguageValue>golang</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Kotlin</LanguageName>
+			<LanguageValue>kotlin</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>PHP</LanguageName>
+			<LanguageValue>php</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Python</LanguageName>
+			<LanguageValue>python</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>SemanticRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Often Misused</Value>
+    </Attribute>
+	<Description formatVersion="3.2">The Often Misused Semantic Rule identifies a user specified function, which can be potentially dangerous if misused.  The vulnerability is triggered whenever a call to the specified function is detected within the application.</Description>
+	<PredefinedVars />
+	<WizardTemplate>
+        <Page type="functionPage">
+			<Name>Often Misused Function Information</Name>
+            <Help>Information about the function whose potential misuse can make the application vulnerable to various security vulnerabilities</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Function Name</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>OftenMisused Wizard.xml</RuleTemplateLocation>
+</Rule>

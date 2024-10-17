@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="structural_terraformnestedblocks_rule">
+    <Name>Structural Rule for Terraform Configuration in Nested Blocks</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>HCL</LanguageName>
+            <LanguageValue>hcl</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Structural Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">The Structural Rule for Terraform Configuration in Nested Blocks identifies a configuration set in nested blocks.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Terraform Configuration Information</Name>
+            <Help>Enter the values for each.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Block Type</Name>
+                <Help>Enter the block type. Supported block types are provider, module, resource, and data. For example, enter the block type "resource" to identify a configuration related to a managed dns zone.</Help>
+                <TextBoxValueSet>
+                    <Key>Block.Type1</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Block Label</Name>
+                <Help>Enter the provider specific block label. For example, enter the block label "google_dns_managed_zone" to identify a configuration related to a Google Cloud Platform managed dns zone.</Help>
+                <TextBoxValueSet>
+                    <Key>Block.Label1</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Nested Block Type</Name>
+                <Help>Enter the nested block type. For example, enter the block type "dnssec_config" to identify a DNSSEC configuration related to a google_dns_managed_zone.</Help>
+                <TextBoxValueSet>
+                    <Key>Block.Type2</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Argument Identifier</Name>
+                <Help>Enter the nested block's argument identifier. For example, enter the argument identifier "state" to identify a dnssec_config that is disabled.</Help>
+                <TextBoxValueSet>
+                    <Key>Identifier</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Argument Expression</Name>
+                <Help>Enter the nested block's argument expression. For example, enter the argument expression "off" to identify a dnssec_config that is disabled.</Help>
+                <TextBoxValueSet>
+                    <Key>Expression</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Structural TerraformNestedBlocks Wizard.xml</RuleTemplateLocation>
+</Rule>

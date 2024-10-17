@@ -1,0 +1,38 @@
+<Properties>
+<UseProjectSpecificSettings>
+<bool>False</bool>
+</UseProjectSpecificSettings>
+<ProjectLocation>
+<dir></dir>
+</ProjectLocation>
+<AdditionalOptions>
+  <bool>False</bool>
+  <optionBuild></optionBuild>
+  <optionScan></optionScan>
+</AdditionalOptions>
+<AdditionalFiles>
+</AdditionalFiles>
+<Rulepacks>
+  <bool>True</bool>
+</Rulepacks>
+<Analyzers>
+</Analyzers>
+<disableProjectScanWarning>
+  <bool>False</bool>
+</disableProjectScanWarning>
+<Memory>
+  <size></size>
+</Memory>
+<DisableSyncAfterLoad>
+  <bool>False</bool>
+</DisableSyncAfterLoad>
+<DisableSyncAfterMerge>
+  <bool>False</bool>
+</DisableSyncAfterMerge>
+<DisableSyncAfterSave>
+  <bool>False</bool>
+</DisableSyncAfterSave>
+<DisableSyncAfterScan>
+  <bool>False</bool>
+</DisableSyncAfterScan>
+</Properties>

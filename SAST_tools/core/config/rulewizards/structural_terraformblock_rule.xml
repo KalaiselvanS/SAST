@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="structural_terraformblock_rule">
+    <Name>Structural Rule for Terraform Configuration in Single Block</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>HCL</LanguageName>
+            <LanguageValue>hcl</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Structural Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">The Structural Rule for Terraform Configuration in Single Block identifies a configuration set in an individual block.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Terraform Configuration Information</Name>
+            <Help>Enter the values for each.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Block Type</Name>
+                <Help>Enter the block type, supported block types are provider, module, resource, and data. For example, enter the block type "resource" to identify a configuration related to a storage bucket.</Help>
+                <TextBoxValueSet>
+                    <Key>Block.Type</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Block Label</Name>
+                <Help>Enter the provider specific block label. For example, enter a block label of "aws_s3_bucket_acl" to identify a configuration related to an AWS S3 bucket access control list.</Help>
+                <TextBoxValueSet>
+                    <Key>Block.Label</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Argument Identifier</Name>
+                <Help>Enter the block's argument identifier. For example, enter the argument identifier "acl" to identify a configuration related to an S3 access control list.</Help>
+                <TextBoxValueSet>
+                    <Key>Identifier</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Argument Expression</Name>
+                <Help>Enter the block's argument expression. For example, enter the argument expression "public.*" to identify an S3 bucket using predefined grants that allow public access.</Help>
+                <TextBoxValueSet>
+                    <Key>Expression</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Structural TerraformBlock Wizard.xml</RuleTemplateLocation>
+</Rule>

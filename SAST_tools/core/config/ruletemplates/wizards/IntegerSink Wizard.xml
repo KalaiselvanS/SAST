@@ -1,0 +1,41 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="altcategoryCWE">CWE ID 190</Group>
+        <Group name="altcategoryOWASP2004">A1 Unvalidated Input</Group>
+        <Group name="altcategoryOWASP2007">None</Group>
+        <Group name="altcategoryPCI1.1">Requirement 6.5.1</Group>
+        <Group name="altcategoryPCI1.2">Requirement 6.3.1.1</Group>
+        <Group name="altcategorySTIG2">APP3510 CAT I, APP3550 CAT I</Group>
+        <Group name="altcategoryWASC24+2">None</Group>
+        <Group name="Accuracy">2</Group>
+        <Group name="Impact">3</Group>
+        <Group name="RemediationEffort">3</Group>
+        <Group name="Probability">1</Group>
+        <Group name="audience">targeted,medium,broad,dev,fod</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>%VulnKingdom%</VulnKingdom>
+    <VulnCategory>%VulnCategory%</VulnCategory>
+    <DefaultSeverity>%DefaultSeverity%</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.integer_overflow">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            %Conditional%
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

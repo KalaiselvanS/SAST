@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-1"  isLanguageScreen="true" language="dotnet">
+	<control>
+		<argument type="switch" useQuotes="true">-libdirs</argument>
+		<fileList sep=";" repeat="5">
+		    <filter isExtension="true">dll</filter>
+		</fileList>
+	</control>
+    <verifier name="DotNetReference" />
+	<query>.NET Reference Directories</query>
+	<help>NET-1.txt</help>
+	<transition />
+</screen>

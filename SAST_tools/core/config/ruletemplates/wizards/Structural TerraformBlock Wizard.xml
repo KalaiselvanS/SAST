@@ -1,0 +1,17 @@
+<StructuralRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Environment</VulnKingdom>
+    <VulnCategory>Generic</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes>This template creates a rule to scan Terraform configurations to identify misconfigurations in an individual block.</Notes>
+    <Description>
+        <Explanation append="true">This issue is being reported by a custom Terraform Configuration rule.</Explanation>
+    </Description>
+    <Predicate><![CDATA[
+                    ConfigBlock : blocktype is "%Block.Type%" and labels contains "%Block.Label%" and
+                        attributes contains [
+                            ConfigPair: name is "%Identifier%" and value matches "%Expression%"
+                        ]*
+            ]]></Predicate>
+</StructuralRule>

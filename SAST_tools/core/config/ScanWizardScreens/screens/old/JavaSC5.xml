@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-5">
+	<language>java</language>
+	<argument type="switch">-source</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="1.7" isDefault="false">1.7</radioButton>
+			<radioButton description="1.8" isDefault="true">1.8</radioButton>
+			<radioButton description="1.9" isDefault="false">1.9</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Please specify the java source version.</query>
+	<help/>
+	<transition/>
+</screen>

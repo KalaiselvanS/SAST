@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="NET-4">
+	<language>dotnet</language>
+	<argument type="switch">-vsversion</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="2.0 (VS2005)" isDefault="false">8.0</radioButton>
+			<radioButton description="3.5 (VS2008)" isDefault="false">9.0</radioButton>
+			<radioButton description="4.0 (VS2010)" isDefault="true">10.0</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Please specify the .NET Framework</query>
+	<help/>
+	<transition>NET-5</transition>
+</screen>

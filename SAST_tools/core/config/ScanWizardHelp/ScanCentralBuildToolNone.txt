@@ -1,0 +1,33 @@
+Specify ScanCentral build options
+
+<b>Additional translation options:</b> Optionally type Fortify Static Code Analyzer translation options.
+
+For ColdFusion:
+<b>Web applications root directory:</b> Type the root directory of the application.
+
+For Java:
+<b>Java version:</b> Specify the JDK version used for your source code.
+
+For JavaScript/TypeScript:
+<b>Include node modules:</b> Select whether to include node module dependencies.
+
+For PHP projects, type the <b>PHP version.</b>
+
+For Python:
+To include dependencies, specify the <b>Python requirements file.</b>
+
+Specify the location of the <b>Python virtual environments.</b>
+
+Specify the <b>Python version.</b>
+
+Only the following setting combinations are valid:
+
+      <li> Virtual environment only
+
+      <li> Virtual environment and Requirements file
+
+      <li> Python version and Requirements file
+
+      <li> Requirements file only.
+
+For SQL projects, specify the <b>SQL file type.</b>

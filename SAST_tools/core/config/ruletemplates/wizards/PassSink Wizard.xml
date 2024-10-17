@@ -1,0 +1,27 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>%VulnKingdom%</VulnKingdom>
+    <VulnCategory>%VulnCategory%</VulnCategory>
+    <DefaultSeverity>%DefaultSeverity%</DefaultSeverity>
+    <Description ref="desc.dataflow.%Language%.password_management">
+     <Explanation append="true">This issue is being reported by a custom rule.</Explanation> 
+    </Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+        <Conditional>
+            %Conditional%
+        </Conditional>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

@@ -1,0 +1,9 @@
+After the scan phase is complete, you can upload the FPR file to Software Security Center. To upload the FPR file, you must provide the Software Security Center URL, an application name and version, and an authentication token.
+        
+<b>SSC URL:</b> Type the URL for Software Security Center.
+        
+<b>Application name:</b> Type the application name or click <b>Get Application Version</b> to get it from Software Security Center. To select an application version from the list, you must provide your user name and password. After you select an application version, the <b>Application name</b> and <b>Application version</b> boxes are populated.
+        
+<b>Application version:</b> If no application version is displayed, type the application version.
+       
+<b>Token:</b> Either type your token or click <b>Get Token</b> to generate a new token. The generated token is of type ToolsConnectToken, which is good for 90 days (default) or for the amount of time configured in Software Security Center. To use the token for future uploads, store it in a safe location.

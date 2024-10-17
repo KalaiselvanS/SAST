@@ -1,0 +1,14 @@
+Instead of scanning the code locally, this process runs the scan remotely using ScanCentral SAST.
+
+<b>Controller URL:</b> Type the URL for the ScanCentral Controller.
+
+<b>Additional scan options:</b> Type Fortify Static Code Analyzer scan options.
+
+<b>Filter file:</b> Specify a file to filter out specific vulnerability categories, rules, and vulnerability instances from the scan.
+
+<b>Issue template:</b> Specify an issue template file to include.
+
+<b>Notification email:</b> Type an email address for ScanCentral job status notifications.
+
+<b>Sensor pool UUID:</b> Specify the sensor pool to which to submit the job.
+

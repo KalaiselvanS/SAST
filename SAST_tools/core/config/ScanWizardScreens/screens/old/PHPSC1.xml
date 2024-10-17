@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="PHP-1">
+	<language>php</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">php</filter>
+			<filter isExtension="true">ctp</filter>
+		</fileList>
+	</control>
+	<query>Please Review PHP files to be scanned</query>
+	<help/>
+	<transition/>
+</screen>

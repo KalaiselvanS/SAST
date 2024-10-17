@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ASP-2">
+	<language>asp</language>
+	<argument type="property">-Dcom.fortify.sca.ASPVirtualRoots.</argument>
+	<control>
+		<tupleList sep="=">
+			<tupleElement query="Specify virtual root">Virtual Root</tupleElement>
+			<tupleElement query="Specify path for virtual root">Path</tupleElement>
+		</tupleList>
+	</control>
+	<query>Please map the virtual paths to absolute paths</query>
+	<help/>
+	<transition />
+</screen>

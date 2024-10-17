@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JSP-3">
+	<language>jsp</language>
+	<argument type="switch">-appserver</argument>
+	<control>
+		<radioButtonGroup>
+			<radioButton description="WebSphere Version 6" isDefault="true" transition="JSP-4">websphere</radioButton>
+			<radioButton description="WebLogic Version 7, 8, 9 or 10" isDefault="false" transition="JSP-5">weblogic</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Please specify the Application Server</query>
+	<help/>
+	<transition/>
+</screen>

@@ -1,0 +1,13 @@
+Select the Ant files in order to update the <b>Build Integration Settings</b> that SCA uses during project translation or construct the command manually.
+
+<b>Ant Integration Files</b>: Location of the Ant integration file
+
+<b>Build integration settings</b> 
+
+<b>Enable Ant integration for "<filename>"</b> check box: Select this check box to enable Ant integration on the selected target files.
+
+<b>Targets used to compile Java Files:</b> Select the type of target files to use to compile your Java files.
+
+<b>Create Command Manually:</b>Edit the command line to include additional Ant parameters.
+
+

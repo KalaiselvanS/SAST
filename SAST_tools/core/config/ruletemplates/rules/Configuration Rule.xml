@@ -1,0 +1,23 @@
+<ConfigurationRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom></VulnKingdom>
+    <VulnCategory></VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity></DefaultSeverity>
+    <Description></Description>
+    <ConfigFile type="">
+        <Pattern></Pattern>
+        <Value></Value>
+    </ConfigFile>
+    <XPathMatch expression="" reporton=""/>
+    <PropertyMatch>
+        <NameMatch>
+            <Pattern></Pattern>
+            <Value></Value>
+        </NameMatch>
+        <ValueMatch>
+            <Pattern></Pattern>
+            <Value></Value>
+        </ValueMatch>
+    </PropertyMatch>
+</ConfigurationRule>

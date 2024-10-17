@@ -1,0 +1,18 @@
+<StructuralRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Environment</VulnKingdom>
+    <VulnCategory>Generic</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes>This template creates a rule to scan cloud configurations and identify an individual misconfiguration by matching against a name and value pair contained in a single JSON or YAML object.</Notes>
+    <Description>
+        <Explanation append="true">This issue is being reported by a custom cloud configuration rule.</Explanation>
+    </Description>
+    <Predicate><![CDATA[
+        ConfigMap : pairs contains [
+		    ConfigPair : name is "%Name%" and value is [
+		        ConfigConcrete : value is %Value%
+            ]*
+		]*
+    ]]></Predicate>
+</StructuralRule>

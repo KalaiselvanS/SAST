@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="generic_sink_rule">
+	<Name>Generic Data Sink Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+            <LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+            <LanguageValue>dotnet</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>ABAP</LanguageName>
+            <LanguageValue>abap</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Apex</LanguageName>
+            <LanguageValue>apex</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>C/C++</LanguageName>
+            <LanguageValue>cpp</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Go</LanguageName>
+            <LanguageValue>golang</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Java</LanguageName>
+            <LanguageValue>java</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>JavaScript/TypeScript</LanguageName>
+            <LanguageValue>javascript</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Kotlin</LanguageName>
+            <LanguageValue>kotlin</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>PHP</LanguageName>
+            <LanguageValue>php</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Python</LanguageName>
+            <LanguageValue>python</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowSinkRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_SINK_GENERIC%</Description>
+	<PredefinedVars />
+	<WizardTemplate>
+        <Page>
+            <Name>Vulnerability Information</Name>
+            <Help>Enter the category, severity, accuracy, impact, remediation effort, and probability of this vulnerability</Help>
+            <StringInput validation="valid-name" allowRegexes="false" required="true">
+                <Name>Category:</Name>
+                <Help>Enter Category of vulnerability (Access Control, Cross-Site Scripting, SQL Injection)</Help>
+                <TextBoxValueSet>
+                    <Key>Category</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <DropDownList editable="false">
+                <Name>Severity</Name>
+                <Help>Select the severity of the vulnerability</Help>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_LOW%</Name>
+                    <Help>Low Severity Vulnerability (2.0)</Help>
+                    <ValueSet>
+                        <Key>Severity</Key>
+                        <Value>2.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_MEDIUM%</Name>
+                    <Help>Medium Severity Vulnerability (3.0)</Help>
+                    <ValueSet>
+                        <Key>Severity</Key>
+                        <Value>3.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_HIGH%</Name>
+                    <Help>High Severity Vulnerability (4.0)</Help>
+                    <ValueSet>
+                        <Key>Severity</Key>
+                        <Value>4.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_CRITICAL%</Name>
+                    <Help>Critical Severity Vulnerability (5.0)</Help>
+                    <ValueSet>
+                        <Key>Severity</Key>
+                        <Value>5.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+            </DropDownList>
+            <DropDownList editable="false">
+                <Name>Accuracy</Name>
+                <Help>Select the accuracy of the vulnerability</Help>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_LOW%</Name>
+                    <Help>Low Accuracy Vulnerability (1.0)</Help>
+                    <ValueSet>
+                        <Key>Accuracy</Key>
+                        <Value>1.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_HIGH%</Name>
+                    <Help>High Accuracy Vulnerability (5.0)</Help>
+                    <ValueSet>
+                        <Key>Accuracy</Key>
+                        <Value>5.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+            </DropDownList>
+            <DropDownList editable="false">
+                <Name>Impact</Name>
+                <Help>Select the impact of the vulnerability</Help>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_LOW%</Name>
+                    <Help>Low Impact Vulnerability (1.0)</Help>
+                    <ValueSet>
+                        <Key>Impact</Key>
+                        <Value>1.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_HIGH%</Name>
+                    <Help>High Impact Vulnerability (5.0)</Help>
+                    <ValueSet>
+                        <Key>Impact</Key>
+                        <Value>5.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+            </DropDownList>
+            <DropDownList editable="false">
+                <Name>RemediationEffort</Name>
+                <Help>Select the remediation effort of the vulnerability</Help>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_LOW%</Name>
+                    <Help>Low Remediation Effort Vulnerability (1.0)</Help>
+                    <ValueSet>
+                        <Key>RemediationEffort</Key>
+                        <Value>1.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_MEDIUM%</Name>
+                    <Help>Low Remediation Effort Vulnerability (5.0)</Help>
+                    <ValueSet>
+                        <Key>RemediationEffort</Key>
+                        <Value>5.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_HIGH%</Name>
+                    <Help>High Remediation Effort Vulnerability (15.0)</Help>
+                    <ValueSet>
+                        <Key>RemediationEffort</Key>
+                        <Value>15.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+            </DropDownList>
+            <DropDownList editable="false">
+                <Name>Probability</Name>
+                <Help>Select the probability of the vulnerability</Help>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_LOW%</Name>
+                    <Help>Low Probability Vulnerability (1.0)</Help>
+                    <ValueSet>
+                        <Key>Probability</Key>
+                        <Value>1.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoice>
+                    <Name>%ISSUE_SEVERITY_HIGH%</Name>
+                    <Help>High Probability Vulnerability (5.0)</Help>
+                    <ValueSet>
+                        <Key>Probability</Key>
+                        <Value>5.0</Value>
+                    </ValueSet>
+                </PrePopChoice>
+            </DropDownList>
+        </Page>
+        <Page type="functionPage">
+			<Name>Sink Function Information</Name>
+            <Help>Enter Information about the function that the data cannot end in</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the passthrough function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the passthrough function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the passthrough Function</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Untrusted Data Information</Name>
+            <Help>Enter Information about the untrusted data</Help>
+			<PrePopInput>
+				<Name>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Name>
+                <Help>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>InArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>InArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>GenericSink Wizard.xml</RuleTemplateLocation>
+</Rule>

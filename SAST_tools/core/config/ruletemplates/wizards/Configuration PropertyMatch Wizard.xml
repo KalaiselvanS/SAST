@@ -1,0 +1,22 @@
+<ConfigurationRule formatVersion="%FORMATVERSION%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Environment</VulnKingdom>
+    <VulnCategory>Generic</VulnCategory>
+    <VulnSubcategory></VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Notes><![CDATA[The <ConfigFile>, <NameMatch>, and <ValueMatch>; elements only support using either the child element <Pattern> or <Value> per rule, not both.]]></Notes>
+    <Description>
+        <Explanation append="true">This issue is being reported by a custom PropertyMatch Configuration rule.</Explanation>
+    </Description>
+    <ConfigFile type="properties">
+        <Value>%ConfigFile.Value%</Value>
+    </ConfigFile>
+    <PropertyMatch>
+        <NameMatch>
+            <Value>%NameMatch.Value%</Value>
+        </NameMatch>
+        <ValueMatch>
+            <Pattern caseInsensitive="true">%ValueMatch.Pattern%</Pattern>
+        </ValueMatch>
+    </PropertyMatch>
+</ConfigurationRule>

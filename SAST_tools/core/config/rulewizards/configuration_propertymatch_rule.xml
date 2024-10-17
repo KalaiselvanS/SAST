@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="configuration_propertymatch_rule">
+    <Name>Configuration Rule for PropertyMatch</Name>
+    <Language/>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Configuration Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This configuration rule identifies configuration vulnerabilities using PropertyMatch and is based on the Property File example described in the Custom Rules Guide.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>PropertyMatch Information</Name>
+            <Help>Enter information about the configuration vulnerability to identify.</Help>
+            <StringInput allowRegexes="false" validation="valid-name" required="true">
+                <Name>ConfigFile Value</Name>
+                <Help>Enter the target file name.</Help>
+                <TextBoxValueSet>
+                    <Key>ConfigFile.Value</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="false" validation="valid-name" required="true">
+                <Name>NameMatch Value</Name>
+                <Help>Enter the name of the property to check.</Help>
+                <TextBoxValueSet>
+                    <Key>NameMatch.Value</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>ValueMatch Pattern</Name>
+                <Help>Enter the pattern to check against the value of properties whose name matches the NameMatch Value.</Help>
+                <TextBoxValueSet>
+                    <Key>ValueMatch.Pattern</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Configuration PropertyMatch Wizard.xml</RuleTemplateLocation>
+</Rule>

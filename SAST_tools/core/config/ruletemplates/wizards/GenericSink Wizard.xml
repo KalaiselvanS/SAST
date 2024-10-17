@@ -1,0 +1,27 @@
+<DataflowSinkRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <MetaInfo>
+        <Group name="Accuracy">%Accuracy%</Group>
+        <Group name="Impact">%Impact%</Group>
+        <Group name="RemediationEffort">%RemediationEffort%</Group>
+        <Group name="Probability">%Probability%</Group>
+    </MetaInfo>
+    <RuleID>%RULEID%</RuleID>
+    <VulnCategory>%Category%</VulnCategory>
+    <DefaultSeverity>%Severity%</DefaultSeverity>
+    <Description></Description>
+    <Sink>
+        <InArguments>%InArguments%</InArguments>
+    </Sink>
+    <FunctionIdentifier>
+        <NamespaceName>
+            <Pattern>%FunctionIdentifier.NamespaceName%</Pattern>
+        </NamespaceName>
+        <ClassName>
+            <Pattern>%FunctionIdentifier.ClassName%</Pattern>
+        </ClassName>
+        <FunctionName>
+            <Pattern>%FunctionIdentifier.FunctionName%</Pattern>
+        </FunctionName>
+        <ApplyTo implements="true" overrides="true" extends="true"/>
+    </FunctionIdentifier>
+</DataflowSinkRule>

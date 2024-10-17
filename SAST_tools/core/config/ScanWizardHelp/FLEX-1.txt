@@ -1,0 +1,4 @@
+Specify the root directories in which MXML sources are located. In most cases, directories contain a subfolder named com. The flex source roots are used to construct names for the generated objects.
+
+For instance, <b>foo/bar/src/com/fortify/manager/util/Foo.mxml</b> is transformed into an object named <b>com.fortify.manager.util.Foo</b>. There is a source root for <b>foo/bar/src</b>.
+

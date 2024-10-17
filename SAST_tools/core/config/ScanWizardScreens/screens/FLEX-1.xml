@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="FLEX-1" isLanguageScreen="true" language="flex">
+	<control>
+		<argument type="switch" useQuotes="true">-flex-source-roots</argument>
+		<directoryList sep=";" />
+	</control>
+	<query>FLEX Source Roots</query>
+	<help>FLEX-1.txt</help>
+	<transition>FLEX-2</transition>
+</screen>

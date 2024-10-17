@@ -1,0 +1,11 @@
+<RegexRule formatVersion="%FORMATVERSION%" language="%Language%">
+    <RuleID>%RULEID%</RuleID>
+    <VulnKingdom>Security Features</VulnKingdom>
+    <VulnCategory>Credential Management</VulnCategory>
+    <VulnSubcategory>Hardcoded API Credentials</VulnSubcategory>
+    <DefaultSeverity>2.0</DefaultSeverity>
+    <Description ref="desc.regex.universal.credential_management_hardcoded_api_credentials">
+        <Explanation append="true">This issue is being reported by a custom rule.</Explanation>
+    </Description>
+    <ContentRegex>%ContentRegex%</ContentRegex>
+</RegexRule>

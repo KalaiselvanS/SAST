@@ -1,0 +1,3 @@
+Review the classpath for the scan. The classpath is used to resolve references from the <b>Java source code</b>. Only files that are checked are included. You can check or uncheck individual files or entire directories.
+
+The files shown are based on the project root(s) that you selected. If you want to include additional files, click <b>Add File Directory</b>.

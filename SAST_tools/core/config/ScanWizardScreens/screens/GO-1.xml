@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="GO-1" isLanguageScreen="true" language="go">
+	<control>
+		<argument type="switch" useQuotes="true">-gopath</argument>
+		<directoryList sep=";" />
+	</control>
+	<query>Go Import Directories</query>
+	<help>GO-1.txt</help>
+	<transition>GO-2</transition>
+</screen>

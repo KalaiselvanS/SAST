@@ -1,0 +1,24 @@
+<HelpLinks>
+	<Link href="0000/AWB_Help_0.0.0/index.htm">
+		<ID>default</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#Scanning/Scanning.htm%3FTocPath%3DScanning%2520Source%2520Code%7C_____0">
+		<ID>Audit Workbench</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#AWBOnly/FunctionsView/CreateCustomCleanseRules.htm%3FTocPath%3DUsing%2520the%2520Functions%2520View%7C_____8">
+		<ID>Custom Rules Editor</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#WorkingWithIssues/UsingAuditGuide.htm%3FTocPath%3DScan%2520Results%7CWorking%2520with%2520Issues%7C_____1">
+		<ID>Audit Guide Wizard...</ID>
+		<ID>Advanced Audit Guide...</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#IssueTemplateConfig/AboutIssueTemplates.htm%3FTocPath%3DScan%2520Results%7C_____4">
+		<ID>Project Configuration</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#Reports/Reports_AWB.htm%3FTocPath%3DAudit%2520Workbench%2520Reports%7C_____0">
+		<ID>Generate Report...</ID>
+	</Link>
+	<Link href="0000/AWB_Help_0.0.0/index.htm#ViewScanResults/SrcCodeView.htm%3FTocPath%3DScan%2520Results%7CAbout%2520Viewing%2520Scan%2520Results%7CSource%2520Code%2520Tab%7C_____0">
+		<ID>Configure Source Path</ID>
+	</Link>
+</HelpLinks>

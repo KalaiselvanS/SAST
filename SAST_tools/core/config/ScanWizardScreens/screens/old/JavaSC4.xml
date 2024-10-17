@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-4">
+	<language>java</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">properties</filter>
+			<filter isExtension="true">ini</filter>
+		</fileList>	
+	</control>
+	<query>Please review Java property files to be scanned</query>
+	<help/>
+	<transition>JAVA-5</transition>
+</screen>

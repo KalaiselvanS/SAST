@@ -1,0 +1,11 @@
+Specify ScanCentral build options
+
+<b>Build file location:</b> Type the build file name. Required if your build file is different than the default of build.gradle or pom.xml.
+
+<b>Build command options:</b> Type any custom build options needed to prepare and build the project. Optional field.
+
+<b>Include tests:</b> Select this check box to include the test source set (Gradle) or the test scope (Maven).
+
+<b>Skip build:</b> Select this check box to skip the build invocation that prepares generated sources and libraries before packaging the project information.
+
+<b>Additional translation options:</b> Optionally type Fortify Static Code Analyzer translation options.

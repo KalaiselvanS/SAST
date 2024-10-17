@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-3">
+	<language>java</language>
+	<argument type="switch" useQuotes="true">-cp</argument>
+	<control>
+		<fileList sep=";" icon="jar">
+			<filter isExtension="true">class</filter>
+			<filter isExtension="true">jar</filter>
+		</fileList>
+	</control>
+	<query>Please review class path</query>
+	<help/>
+	<transition>JAVA-4</transition>
+</screen>

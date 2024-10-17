@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="path_manipulation_sink_rule">
+    <Name>Path Manipulation Sink Rule</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+            <LanguageValue>dotnet</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>ABAP</LanguageName>
+            <LanguageValue>abap</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>C/C++</LanguageName>
+            <LanguageValue>cpp</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Go</LanguageName>
+            <LanguageValue>golang</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Java</LanguageName>
+            <LanguageValue>java</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Kotlin</LanguageName>
+            <LanguageValue>kotlin</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>PHP</LanguageName>
+            <LanguageValue>php</LanguageValue>
+        </LanguageSpecifier>
+        <LanguageSpecifier>
+            <LanguageName>Python</LanguageName>
+            <LanguageValue>python</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowSinkRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Path Manipulation</Value>
+    </Attribute>
+    <Description formatVersion="3.2">%WIZARD_HELP_SINK_PATH%</Description>
+    <PredefinedVars/>
+    <WizardTemplate>
+        <Page type="functionPage">
+            <Name>Path Manipulation Function Information</Name>
+            <Help>Enter Information about the sink function</Help>
+            <PrePopInput>
+                <Name>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Name>
+                <Help>%WIZARDPAGE_DFPARAM_QUEST_UNTRUSTED%</Help>
+                <PrePopChoice>
+                    <Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+                    <Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+                    <ValueSet>
+                        <Key>InArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+                </PrePopChoice>
+                <PrePopChoiceTextBox validation="comma-separated-integers">
+                    <Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+                    <Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>InArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+                </PrePopChoiceTextBox>
+            </PrePopInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+                <Name>Package:</Name>
+                <Help>Package/Namespace the sink function is in</Help>
+                <TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+                <Name>Class:</Name>
+                <Help>Class the sink function is in</Help>
+                <TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+            </StringInput>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Function:</Name>
+                <Help>Which Function is the sink Function</Help>
+                <TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>PathManipulationSink Wizard.xml</RuleTemplateLocation>
+</Rule>

@@ -1,0 +1,5 @@
+Thank you for using the <b>Fortify Scan Wizard</b>.
+
+<b>Important:</b> You cannot run a script generated for a Windows machine on a non-Windows machine. Likewise, you cannot run a script generated for a non-Windows system on a Windows system. 
+
+To use this script, copy it to the relevant directory and run it. The script translates (and scans, if selected) the files you specified when you generated the script. 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="regex_tokencontentregex_rule">
+    <Name>Credential Management: Hardcoded API Credential</Name>
+    <Language>
+        <LanguageSpecifier>
+            <LanguageName>Universal</LanguageName>
+            <LanguageValue>universal</LanguageValue>
+        </LanguageSpecifier>
+    </Language>
+    <Attribute>
+        <Key>Rule Type</Key>
+        <Value>Regex Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Credential Management</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This Regex Rule identifies the presence of hardcoded tokens in an application. The search is based on matching a ContentRegex against the specified naming convention for tokens and their associated values used by the application.</Description>
+    <PredefinedVars />
+    <WizardTemplate>
+        <Page>
+            <Name>Token and Value Search Type</Name>
+            <Help>Enter a regular expression to match the type of token and its respective value based on the convention followed in the application.</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="true">
+                <Name>Regular Expression</Name>
+                <Help>Enter a regular expression.</Help>
+                <TextBoxValueSet>
+                    <Key>ContentRegex</Key>
+                </TextBoxValueSet>
+            </StringInput>
+        </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>Regex TokenContentRegex Wizard.xml</RuleTemplateLocation>
+</Rule>

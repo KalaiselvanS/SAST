@@ -1,0 +1,24 @@
+Welcome to Fortify Scan Wizard. Use this tool to configure and run Fortify Static Code Analyzer scans of your project code quickly and easily. Scan Wizard enables you to run your scans locally and remotely with Fortify ScanCentral. Finally, if you have a Fortify Software Security Center account, you can upload your scan results to the server.
+
+Before you start, make sure that you have the following:
+
+<li>Location of the build directory of the project to be scanned
+<li>Access to the build directory of the project to be scanned
+<li>If you are scanning Java code, the Java JDK version used in development
+<li>If you plan to use ScanCentral, the URL for your ScanCentral Controller
+<li>(Optional) Location of your custom rule files 
+
+If you plan to send your scan results to Software Security Center, you also need:
+
+<li>Your Software Security Center username and password
+<li>Software Security Center server URL 
+<li>Token
+
+<b>Note:</b> If you do not have any token, you can use the Scan Wizard to generate a multi-use token. (You must have a Software Security Center account to generate a multi-use token.)
+
+If you do not have Software Security Center credentials, you must also have the following:
+
+<li>Application Name
+<li>Application Version
+
+Click <b>Add Project Root</b>, and then select the project directories that contain the source code and libraries that you want to include in your scan. On subsequent pages, you can select specific files and libraries to scan.

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA_BYTECODE-2" isLanguageScreen="true" language="bytecode">
+	<control>
+		<argument type="switch">-source</argument>
+		<radioButtonGroup>
+			<radioButton description="1.7" isDefault="false">1.7</radioButton>
+			<radioButton description="1.8" isDefault="true">1.8</radioButton>
+			<radioButton description="1.9" isDefault="false">1.9</radioButton>
+			<radioButton description="10" isDefault="false">10</radioButton>
+			<radioButton description="11" isDefault="false">11</radioButton>
+			<radioButton description="12" isDefault="false">12</radioButton>
+			<radioButton description="13" isDefault="false">13</radioButton>
+			<radioButton description="14" isDefault="false">14</radioButton>
+			<radioButton description="17" isDefault="false">17</radioButton>
+		</radioButtonGroup>
+	</control>
+	<query>Java Source Version</query>
+	<help>JAVA_BYTECODE-2.txt</help>
+	<transition/>
+</screen>

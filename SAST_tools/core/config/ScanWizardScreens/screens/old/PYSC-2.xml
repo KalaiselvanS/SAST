@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="PYTHON-2">
+	<language>python</language>
+	<argument type="switch" useQuotes="true">-python-path</argument>
+	<control>
+		<directoryList sep=";" />
+	</control>
+	<query>Please add any additional Python import directories</query>
+	<help/>
+	<transition />
+</screen>

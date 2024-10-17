@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="generic_entry_point_rule">
+	<Name>Generic Entry Point Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>.NET/ASP.NET/VB.NET</LanguageName>
+			<LanguageValue>dotnet</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>ABAP</LanguageName>
+			<LanguageValue>abap</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Apex</LanguageName>
+			<LanguageValue>apex</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+		<LanguageSpecifier>
+			<LanguageName>Java</LanguageName>
+			<LanguageValue>java</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowEntryPointRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Generic</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_ENTRY_POINT_GENERIC%</Description>
+	<PredefinedVars />
+	<WizardTemplate>
+		<Page type="functionPage">
+			<Name>Entry Point Function Information</Name>
+            <Help>Information about the function that represents the entry point</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the entry point function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the entry point function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the entry point function</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Data Flow Information</Name>
+            <Help>Determine where the data enters the function</Help>
+            <PrePopInput>
+				<Name>%WIZARDPAGE_DATAPROP_QUEST_DATA_ENTERS%</Name>
+				<Help>Where the Data enters the entry point functionh</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>InArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+				<PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+                    <TextBoxValueSet>
+                        <Key>InArguments</Key>
+                    </TextBoxValueSet>
+                    <!-- Use text box value for value -->
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>GenericEntryPoint Wizard.xml</RuleTemplateLocation>
+</Rule>

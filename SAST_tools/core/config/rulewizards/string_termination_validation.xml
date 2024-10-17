@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="stringTerm_validation_rule">
+	<Name>String Termination Error Validation Rule</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>C/C++</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>DataflowCleanseRule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>String Termination Error</Value>
+    </Attribute>
+	<Description formatVersion="3.2">%WIZARD_HELP_VALIDATION_STRING_TERM%</Description>
+	<PredefinedVars>
+		<PredefinedVar>
+			<VarName>TaintFlags</VarName>
+			<VarValue>-NOT_NULL_TERMINATED,+NULL_TERMINATED,+VALIDATED_STRING_TERMINATION_ERROR</VarValue>
+		</PredefinedVar>
+	</PredefinedVars>
+	<WizardTemplate>
+		<Page type="functionPage">
+			<Name>Validation Function Information</Name>
+            <Help>Information about the Validation Function</Help>
+            <StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Package:</Name>
+				<Help>Package/Namespace the validation function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.NamespaceName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="false">
+				<Name>Class:</Name>
+				<Help>Class the validation function is in</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.ClassName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+				<Help>Which Function is the validation Function</Help>
+				<TextBoxValueSet>
+                    <Key>FunctionIdentifier.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+		</Page>
+		<Page>
+			<Name>Data Validation Information</Name>
+			<Help>Information about the data that gets validated</Help>
+			<PrePopInput>
+				<Name>%WIZARDPAGE_DFPARAM_QUEST_FUNC_VALIDATE%</Name>
+				<Help>%WIZARDPAGE_DFPARAM_QUEST_FUNC_VALIDATE%</Help>
+				<PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_RETURN%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_RETURN%</Help>
+					<ValueSet>
+                        <Key>OutArguments</Key>
+                        <Value>return</Value>
+                    </ValueSet>
+				</PrePopChoice>
+                <PrePopChoice>
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_THIS%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_THIS%</Help>
+					<ValueSet>
+                        <Key>OutArguments</Key>
+                        <Value>this</Value>
+                    </ValueSet>
+				</PrePopChoice>
+                <PrePopChoiceTextBox validation="comma-separated-integers">
+					<Name>%WIZARDPAGE_OPTION_FUNC_PARAM_ARG%</Name>
+					<Help>%WIZARDPAGE_DATAPROP_HELP_DATA_PASSES_ARG%</Help>
+					<TextBoxValueSet>
+                        <Key>OutArguments</Key>
+                    </TextBoxValueSet>
+				</PrePopChoiceTextBox>
+			</PrePopInput>
+		</Page>
+	</WizardTemplate>
+	<RuleTemplateLocation>StringTermValidation Wizard.xml</RuleTemplateLocation>
+</Rule>

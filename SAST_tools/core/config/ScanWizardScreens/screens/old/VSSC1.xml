@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="VS-1">
+	<language>dotnet</language>
+	<argument type="touchless" id="vs">devenv </argument>
+	<control>
+		<fileSelect>
+			<filter isExtension="true">sln</filter>
+		</fileSelect>
+	</control>
+	<query>Please select the .NET Solution to scan</query>
+	<help/>
+	<transition>VS-2</transition>
+</screen>

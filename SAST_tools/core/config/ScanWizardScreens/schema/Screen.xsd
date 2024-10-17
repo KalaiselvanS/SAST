@@ -1,0 +1,197 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">	
+	<xs:element name="query" type="xs:string" />
+	<xs:element name="help" type="xs:string" />
+   	<xs:element name="transition" type="xs:string" />
+
+    <xs:attribute name="isBeforeScreen" type="xs:boolean" />
+    <xs:attribute name="isAfterScreen" type="xs:boolean" />
+    <xs:attribute name="isLanguageScreen" type="xs:boolean" />
+    <xs:attribute name="language" type="xs:string" />
+    <xs:attribute name="priority" type="xs:integer" />
+
+  	<xs:attribute name="description" type="xs:string" />
+   	<xs:attribute name="sep" type="xs:string" />
+	<xs:attribute name="isExtension" type="xs:boolean" />
+	<xs:attribute name="type" type="xs:string" />
+	<xs:attribute name="useQuotes" type="xs:boolean" />
+	<xs:attribute name="name" type="xs:string" />
+	<xs:attribute name="isDefault" type="xs:boolean" />
+	<xs:attribute name="assignmentOp" type="xs:string" />
+	<xs:attribute name="query" type="xs:string" />
+	<xs:attribute name="isSave" type="xs:boolean" />
+   	<xs:attribute name="transition" type="xs:string" />
+	<xs:attribute name="id" type="xs:string" />
+	<xs:attribute name="icon" type="xs:string" />
+	<xs:attribute name="repeat" type="xs:integer" />
+
+
+	<xs:element name="argument">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="type" use="required" />
+					<xs:attribute ref="useQuotes" use="optional" />
+					<xs:attribute ref="assignmentOp" use="optional" />
+					<xs:attribute ref="id" use="optional" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="filter">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="isExtension" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+		
+	<xs:element name="fileList">
+		<xs:complexType>
+	    	<xs:sequence>
+	    		<xs:element ref="filter" maxOccurs="unbounded" minOccurs="1" />
+	    	</xs:sequence>
+			<xs:attribute ref="description" />
+			<xs:attribute ref="sep" />
+            <xs:attribute ref="icon" />
+            <xs:attribute ref="repeat" />
+		</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="radioButton" default="none">
+    	<xs:complexType>
+    		<xs:simpleContent>
+    			<xs:extension base="xs:string">
+    					<xs:attribute ref="description" use="required" />
+    					<xs:attribute ref="isDefault" />
+    					<xs:attribute ref="transition" use="optional" />
+    			</xs:extension>
+    		</xs:simpleContent>
+    	</xs:complexType>
+    </xs:element>
+    
+	<xs:element name="radioButtonGroup">
+		<xs:complexType>
+	    	<xs:sequence>
+	    		<xs:element ref="radioButton" maxOccurs="unbounded" minOccurs="2" />
+	    	</xs:sequence>
+			<xs:attribute ref="description" />
+		</xs:complexType>
+    </xs:element>
+
+    <xs:element name="tupleElement">
+    	<xs:complexType>
+    		<xs:simpleContent>
+    			<xs:extension base="xs:string">
+    					<xs:attribute ref="query" use="required" />
+    			</xs:extension>
+    		</xs:simpleContent>
+    	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="tupleList">
+    	<xs:complexType>
+		    <xs:sequence>
+		    	<xs:element ref="tupleElement" maxOccurs="2" minOccurs="2" />
+		    </xs:sequence>
+			<xs:attribute ref="description" />
+			<xs:attribute ref="sep" />
+		</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="fileSelect">
+    	<xs:complexType>
+	    	<xs:sequence>
+	    		<xs:element ref="filter" maxOccurs="unbounded" minOccurs="0" />
+	    	</xs:sequence>
+			<xs:attribute ref="isSave" use="optional" />
+			<xs:attribute ref="description" use="optional" />
+		</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="textBox" fixed="none">
+    	<xs:complexType>
+    		<xs:simpleContent>
+    			<xs:extension base="xs:string">
+					<xs:attribute ref="description" use="optional" />
+    			</xs:extension>
+    		</xs:simpleContent>
+    	</xs:complexType>
+    </xs:element>
+    
+    <xs:element name="directorySelect" fixed="none">
+    	<xs:complexType>
+    		<xs:simpleContent>
+    			<xs:extension base="xs:string">
+					<xs:attribute ref="description" use="optional" />
+    			</xs:extension>
+    		</xs:simpleContent>
+    	</xs:complexType>
+    </xs:element>
+
+    <xs:element name="directoryList">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="filter" maxOccurs="unbounded" minOccurs="0" />
+                </xs:sequence>
+                <xs:attribute ref="description" />
+                <xs:attribute ref="sep" />
+                <xs:attribute ref="icon" />
+            </xs:complexType>
+    </xs:element>
+
+
+	<xs:element name="control">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="argument" maxOccurs="1" minOccurs="1"/>
+				<xs:element ref="fileList" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="radioButtonGroup" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="tupleList" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="fileSelect" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="directorySelect" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="directoryList" maxOccurs="1" minOccurs="0" />
+    			<xs:element ref="textBox" maxOccurs="1" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="arg">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="id" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="verifier">
+        <xs:complexType>
+            <xs:sequence>
+                  <xs:element ref="arg" maxOccurs="unbounded" minOccurs="0" />
+            </xs:sequence>
+            <xs:attribute ref="name" use="required"/>
+        </xs:complexType>
+	</xs:element>
+	
+	<xs:element name="screen">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="control" maxOccurs="unbounded" minOccurs="1"/>
+				<xs:element ref="verifier" maxOccurs="1" minOccurs="0"/>
+				<xs:element ref="query" maxOccurs="1" minOccurs="1"/>
+				<xs:element ref="help" maxOccurs="1" minOccurs="0"/>
+				<xs:element ref="transition" maxOccurs="1" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute ref="name" use="required" />
+            <xs:attribute ref="isBeforeScreen" use="optional" />
+            <xs:attribute ref="isAfterScreen" use="optional" />
+            <xs:attribute ref="isLanguageScreen" use="optional" />
+            <xs:attribute ref="language" use="optional" />
+            <xs:attribute ref="priority" use="optional" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,25 @@
+Select the Maven POM files. If you select parent POM file, SCA translates sub modules specified in it.
+
+<b>Maven Integration Files</b>: Location of the Maven integration file
+
+<b>Build integration settings</b> 
+
+<b>Enable Maven integration for "<filename>"</b> check box: Select this check box to enable Maven integration on the selected POM files.
+
+<b>Options:</b> Specify SCA options if necessary:
+
+- Java version: Indicates which version of the Java language the Java code adheres to. Valid values are 1.3, 1.4, 1.5, 1.6, 1.7, 1.8 and 1.9. Default is "1.8". (-source <value>)
+
+- Additional class path: Uses the specified classpath value for Java builds. (-cp <classpath>)
+
+- Log file path: Specifies a destination for the log file. (-logfile <file>)
+
+- Encoding: Specifies the source file encoding. Default value is the platform default. (-encoding <encoding-name>)
+
+- Debug: Causes the build step to write additional troubleshooting information to the log file. (-debug)
+
+- Quiet: Disables the command line progress bar. (-quiet)
+
+- Verbose: Outputs verbose messages to the console. (-verbose)
+
+<b>Create Command Manually:</b> Edit the command line to include additional Maven options.

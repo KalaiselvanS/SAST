@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="JAVA-2">
+	<language>java</language>
+	<argument type="scanned"></argument>
+	<control>
+		<fileList>
+			<filter isExtension="true">java</filter>
+		</fileList>
+	</control>
+	<query>Please review Java files to be scanned</query>
+	<help/>
+	<transition>JAVA-3</transition>
+</screen>

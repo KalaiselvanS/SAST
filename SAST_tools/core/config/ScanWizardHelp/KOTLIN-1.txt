@@ -1,0 +1,3 @@
+Review the classpath for the scan. The classpath is used to resolve references from the <b>Kotlin source code</b>. Only selected files are included. You can select individual files or entire directories.
+
+The files shown are based on the selected project roots. If you want to include additional files, click <b>Add File Directory</b>.

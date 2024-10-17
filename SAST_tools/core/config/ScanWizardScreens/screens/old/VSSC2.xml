@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="VS-2">
+	<language>dotnet</language>
+	<argument type="touchless" id="vs"></argument>
+	<control>
+		<textBox description="Build instructions (e.g /REBUILD debug): " />
+	</control>
+	<query>Please define the build instructions</query>
+	<help/>
+	<transition />
+</screen>

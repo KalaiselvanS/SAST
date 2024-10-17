@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RulePack xmlns="xmlns://www.fortifysoftware.com/schema/rules"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="RulePack">
+    <RulePackID>%RULEPACKID%</RulePackID>
+    <SKU>SKU-%RULEPACKID%</SKU>
+    <Name><![CDATA[%RULEPACKFILENAME%]]></Name>
+    <Version>1.0</Version>
+    <Description><![CDATA[Description for %RULEPACKFILENAME%]]></Description>
+    <Rules version="%RULESVERSION%">
+        <RuleDefinitions>
+        </RuleDefinitions>
+    </Rules>
+</RulePack>

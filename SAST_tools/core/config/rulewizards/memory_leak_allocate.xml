@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rule id="memory_leak_allocate">
+	<Name>Memory Leak: Allocation Rule for Core C / C WinAPI</Name>
+	<Language>
+		<LanguageSpecifier>
+			<LanguageName>C</LanguageName>
+			<LanguageValue>cpp</LanguageValue>
+		</LanguageSpecifier>
+	</Language>
+	<Attribute>
+        <Key>Rule Type</Key>
+        <Value>Controlflow Rule</Value>
+    </Attribute>
+    <Attribute>
+        <Key>Category</Key>
+        <Value>Memory Leak</Value>
+    </Attribute>
+    <Description formatVersion="3.2">This rule identifies the specified function as a proprietary memory allocation function.  It is used to help detect Memory Leak vulnerabilities associated with the function.  The wizard assumes that the specified custom memory allocation function returns the handle to the allocated memory.  If otherwise, please modify the generated xml rule as applicable.</Description>
+	<PredefinedVars />
+	<WizardTemplate>
+	    <Page type="functionPage">
+            <Name>Memory Allocation Function</Name>
+	    <Help>Enter information about the proprietary memory allocation function. Please note, the wizard assumes that the function returns the handle to the allocated memory.</Help> 
+			<StringInput allowRegexes="true" validation="valid-regex" required="true">
+				<Name>Function:</Name>
+	                        <Help>Enter information about the proprietary memory allocation function. Please note, the wizard assumes that the function returns the handle to the allocated memory. If otherwise, please refer to the Controlflow Rule section of the Custom Rules Guide, for further information on how to update the generated XML rule, to accommodate the required function signature.</Help>
+				<TextBoxValueSet>
+                    <Key>AllocationFunction.FunctionName</Key>
+                </TextBoxValueSet>
+			</StringInput>
+	    </Page>
+            <Page>
+            <Name>Memory De-allocation Function</Name>
+	    <Help>Enter information about the proprietary memory de-allocation function. Please note, the wizard assumes that the function accepts the handle to the allocated memory as a function argument.</Help>
+             <PrePopInput>
+                <Name>Do you have a proprietary memory de-allocation function?</Name>
+                <Help>Enter information on whether you have a proprietary memory de-allocation function</Help>
+                <PrePopChoice>
+                    <Name>No</Name>
+                    <Help>No proprietary memory de-allocation function</Help>
+                </PrePopChoice>
+                <PrePopChoiceTextBox validation="valid-regex">
+                    <Name>Yes</Name>
+                    <Help>Enter the name of the proprietary memory de-allocation function</Help>
+                    <RuleTemplateLocation>MemoryLeak Wizard.xml</RuleTemplateLocation>
+                    <TextBoxValueSet>
+                       <Key>DeallocationFunction.FunctionName</Key>
+                    </TextBoxValueSet>
+                </PrePopChoiceTextBox>
+             </PrePopInput>
+           </Page>
+    </WizardTemplate>
+    <RuleTemplateLocation>MemoryLeakAllocate Wizard.xml</RuleTemplateLocation>
+</Rule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="ANT-2">
+	<language>java</language>
+	<argument type="touchless" id="ant"></argument>
+	<control>
+		<textBox description="Build targets (e.g clean build): " />
+	</control>
+	<query>Please define the build targets</query>
+	<help/>
+	<transition />
+</screen>

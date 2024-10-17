@@ -1,0 +1,3 @@
+<SuppressionRule formatVersion="%FORMATVERSION%">
+    <RuleID>%Suppression.RuleId%</RuleID>
+</SuppressionRule>

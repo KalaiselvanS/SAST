@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen name="CFML-2">
+	<language>cfml</language>
+	<argument type="switch">-source-base-dir</argument>
+	<control>
+		<directorySelect description="Web applications root directory" />
+	</control>
+	<query>Please specify the applications root directory</query>
+	<help/>
+	<transition />
+</screen>
